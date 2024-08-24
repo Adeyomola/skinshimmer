@@ -1,0 +1,80 @@
+    /* header */
+    header {
+        display: grid;
+        grid-template-columns: auto auto;
+        background-size: cover;
+        padding: 0.5rem;
+        background-color: #1d242c;
+    }
+
+    #title {
+        display: flex;
+        flex-direction: column;
+        font: 4vh 'Montserrat';
+        font-weight: 600;
+        color: burlywood;
+        text-decoration: none;
+        width: fit-content;
+    }
+
+    #tagline {
+        font: italic 2vh 'Montserrat';
+        color: burlywood;
+    }
+
+    /* nav */
+    nav {
+        display: flex;
+        justify-content: right;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    nav a {
+        margin: 0.5rem;
+        font: 2.5vw 'Montserrat';
+        font-weight: 100;
+        color: burlywood;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a:hover {
+        scale: 1.05;
+    }
+
+
+    @media screen and (min-width: 640px) {
+        nav a {
+            font-size: 1.8vw;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        nav a {
+            font-size: 1.3vw;
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        header {
+            background-size: 100% 200%;
+        }
+
+        nav a {
+            font-size: 0.9vw;
+        }
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 1023px) and (orientation: landscape) {
+        #tagline {
+            font-size: 1.5vw;
+        }
+
+        nav a {
+            font-size: 1.5vw;
+        }
+    }
