@@ -7,10 +7,6 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from werkzeug.exceptions import abort
 import re
 import functools
-import pyotp
-import os
-from dotenv import load_dotenv
-load_dotenv('./')
 
 bp = Blueprint('auth', __name__, template_folder='templates', static_folder='static', static_url_path='/auth/static')
 
