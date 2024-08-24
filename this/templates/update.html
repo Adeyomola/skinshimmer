@@ -47,8 +47,6 @@
         <button id="superscript" class="editorbuttons"><i class="fa fa-superscript"></i></button>
         <button id="createLink" class="editorbuttons"><i class="fa fa-link"></i></button>
         <button id="unlink" class="editorbuttons"><i class="fa fa-unlink"></i></button>
-        <label for="inlineImage" class="editorbuttons"> Img </label>
-        <input id="inlineImage" type="file" name="file" accept="image/png, image/jpeg, image/webp">
     </div>
     <form method="post" enctype=multipart/form-data>
         <input type="text" id="article-title-1" placeholder="Title:" name="title" value="{{ post_row['title'] }}"
@@ -59,7 +57,13 @@
         <div id="body" contenteditable="true">
             {{ post_row['body'] | safe }}
         </div>
-        <input type="file" name="file" accept="image/png, image/jpeg, image/webp">
+        <label for="postimage"> Upload Post Image </label>
+        <input type="file" id="postimage" name="file" accept="image/png, image/jpeg, image/webp">
+        <select id="formatBlock" name="category">
+            <option value="{{ post_row['category'] }}" selected>Category</option>
+            <option value="skincare">Skincare</option>
+            <option value="hair">Hair</option>
+        </select>
         <button id="update" type="submit"
             onclick="document.getElementById('hiddeninput').value = document.getElementById('body').innerHTML"> Update
         </button>

@@ -29,8 +29,8 @@
                 {% if not post['image_url'] %}
                 <img src="../static/images/placeholder.webp">
                 {% endif %}
-                <a href="/{{ post['title']}}" id="article-title">{{ post['title'] | safe }}</a>
-                <a href="/{{ post['title']}}" id="preview">{{ post['body'] | striptags }}</a>
+                <a href="/{{ post ['category'] }}/{{ post['title']}}" id="article-title">{{ post['title'] | safe }}</a>
+                <a href="/{{ post ['category'] }}/{{ post['title']}}" id="preview">{{ post['body'] | striptags }}</a>
             </summary>
             {% endfor %}
         </section>

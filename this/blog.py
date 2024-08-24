@@ -35,11 +35,13 @@ def write():
         error = None
         title = request.form['title']
         body = request.form['body']
+        category = request.form['category']
+
         connection = get_db()
         image_url = Upload.upload_file(Upload)
         if error is None:
             try:
-                statement = (insert(table).values(title=title, author_id=g.get('user')[0], firstname=g.get('user')[1], body=body, image_url=image_url))
+                statement = (insert(table).values(title=title, author_id=g.get('user')[0], firstname=g.get('user')[1], body=body, image_url=image_url, category=category))
                 connection.execute(statement)
                 connection.commit()
                 return redirect('/')
@@ -63,12 +65,12 @@ def post():
     connection.close()
     return render_template('post.html', posts=posts)
 
-@bp.route('/<post_title>')
-def get_post(post_title):
+@bp.route('/<post_category>/<post_title>')
+def get_post(post_title, post_category):
     connection = get_db()
     Verify.verify_post(post_title, table, connection)
 
-    statement = (select(table).where(table.c.title == post_title))
+    statement = (select(table).where(table.c.title == post_title and table.c.category == post_category))
     post_row = connection.execute(statement)
     post_row = ResultProxy.fetchone(post_row)
 
@@ -96,11 +98,14 @@ def update_post(post_title):
                 image_url = post_row[6]
             else:
                 image_url = None
+                
             title = request.form['title']
-            body = request.form['body']          
-            connection.execute((update(table).where(table.c.title == post_title).values(title=title, body=body, image_url=image_url)))
+            body = request.form['body']
+            category = request.form['category']
+
+            connection.execute((update(table).where(table.c.title == post_title).values(title=title, body=body, image_url=image_url, category=category)))
             connection.commit()
-            return redirect(url_for('blog.get_post', post_title=post_row[4]))
+            return redirect(url_for('blog.get_post', post_title=title, post_category=category))
         finally:
             connection.close()
     connection.close()

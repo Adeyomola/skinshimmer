@@ -118,17 +118,19 @@ const inlineImage = document.getElementById("inlineImage");
 
 body.addEventListener("paste", (e) => {
   let data = e.clipboardData.files[0];
-
+  let reader = new FileReader();
   const image = document.createElement("img");
 
-  image.src = URL.createObjectURL(data);
+  reader.readAsDataURL(data);
 
   preserveSelection();
 
   restoreSelection();
 
-  selected.innerHTML =
-    " <img height=400 style='display: block' src=" +
-    URL.createObjectURL(data) +
-    "> </img>";
+  reader.addEventListener("load", () => {
+    selected.innerHTML =
+      "<br> <img height=400 style='display: block; margin: 0 auto' src=" +
+      reader.result +
+      "> </img>";
+  });
 });

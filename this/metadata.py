@@ -20,6 +20,7 @@ def metadata():
     Column('created', TIMESTAMP, default=datetime.datetime.now),
     Column('title', Text, nullable=False, unique=True),
     Column('body', Text, nullable=False),
-    Column('image_url', NVARCHAR)
+    Column('image_url', NVARCHAR),
+    Column('category', Text, nullable=False)
     )
     return md
