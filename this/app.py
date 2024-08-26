@@ -14,8 +14,8 @@ def create_app():
     app=Flask(__name__)
 
     app.config.from_mapping(
-        SECRET_KEY='secret_key',
-        ENGINE= sqlalchemy.create_engine(f"sqlite:///{db_path}")
+        SECRET_KEY=secret_key,
+        ENGINE= sqlalchemy.create_engine(f"mysql://{db_user}:{db_password}@{host}/{db_name}")
     )
 
     from . import blog
