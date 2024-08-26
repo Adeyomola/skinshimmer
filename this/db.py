@@ -1,4 +1,4 @@
-from .metadata import metadata
+from this.metadata import metadata
 from flask import current_app, g
 
 def get_db():
