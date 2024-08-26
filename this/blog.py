@@ -1,13 +1,13 @@
-from this.db import get_db
-from this.metadata import metadata
+from .db import get_db
+from .metadata import metadata
 from flask import request, render_template, flash, redirect, session, Blueprint, g, url_for
 from sqlalchemy import insert, select, delete, update
 from sqlalchemy.engine import ResultProxy
 from sqlalchemy.exc import IntegrityError
-from this.auth import login_required
+from .auth import login_required
 import re
-from this.uploads import Upload
-from this.verify import Verify
+from .uploads import Upload
+from .verify import Verify
 
 bp = Blueprint('blog', __name__, template_folder='templates', static_folder='static', static_url_path='/blog/static')
 

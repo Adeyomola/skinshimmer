@@ -18,11 +18,11 @@ def create_app():
         ENGINE= sqlalchemy.create_engine(f"sqlite:///{db_path}")
     )
 
-    import this.blog
-    app.register_blueprint(this.blog.bp)
+    from . import blog
+    app.register_blueprint(blog.bp)
 
-    import this.auth
-    app.register_blueprint(this.auth.bp)
+    from . import auth
+    app.register_blueprint(auth.bp)
 
     @app.route('/', methods=['GET', 'POST'])
     def home():
@@ -33,8 +33,8 @@ def create_app():
         session.clear()
         return redirect('/')
     
-    import this.db
-    this.db.init_app(app)
+    from . import db
+    db.init_app(app)
     return app
 
 app = create_app()

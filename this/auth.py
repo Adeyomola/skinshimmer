@@ -1,5 +1,5 @@
-from this.db import get_db
-from this.metadata import metadata
+from .db import get_db
+from .metadata import metadata
 from flask import request, session, render_template, flash, redirect, Blueprint, g
 from sqlalchemy.sql import select, insert, update
 from sqlalchemy.engine import Result
