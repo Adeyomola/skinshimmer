@@ -10,7 +10,7 @@ def metadata():
     Column('username', String(255), unique=True),
     Column('password', String(255)),
     Column('email', String(255), unique=True),
-    Column('image_url', NVARCHAR(255))
+    Column('image_url', String(255))
         )
     post = Table(
     'post', md,
@@ -20,7 +20,7 @@ def metadata():
     Column('created', TIMESTAMP, default=datetime.datetime.now),
     Column('title', Text, nullable=False, unique=True),
     Column('body', Text, nullable=False),
-    Column('image_url', NVARCHAR(255)),
+    Column('image_url', String(255)),
     Column('category', Text, nullable=False)
     )
     comments = Table(
