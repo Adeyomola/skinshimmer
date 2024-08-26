@@ -1,4 +1,4 @@
-app = "verba"
+app = "sm"
 primary_region = "sea"
 
 [build]
