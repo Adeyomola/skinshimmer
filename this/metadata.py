@@ -18,7 +18,7 @@ def metadata():
     Column('author_id', Integer, ForeignKey('users.id'), nullable=False),
     Column('firstname', String(255)),
     Column('created', TIMESTAMP, default=datetime.datetime.now),
-    Column('title', Text, nullable=False, unique=True),
+    Column('title', Text, nullable=False),
     Column('body', Text, nullable=False),
     Column('image_url', String(255)),
     Column('category', Text, nullable=False)
@@ -27,6 +27,6 @@ def metadata():
     'comments', md,
     Column('post', Integer),
     Column('name', Text, nullable=False),
-    Column('comment', Text, nullable=False, unique=True),
+    Column('comment', Text, nullable=False),
     )
     return md
