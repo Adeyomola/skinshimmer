@@ -47,15 +47,16 @@ article {
     min-height: 70vh;
     margin-bottom: 5vh;
     padding: 0.5rem;
-    font: 0.8rem 'Cabin';
+    font: 1rem 'Cabin';
     font-weight: 100;
     overflow-y: scroll;
+    line-height: 1.5rem;
 }
 
 #article-title-2 {
     width: max-content;
     text-align: center;
-    font: 3vw 'Cabin';
+    font: 5vw 'Cabin';
     font-weight: 600;
     color: #1d242c;
     text-transform: uppercase;
@@ -66,7 +67,7 @@ article {
     display: inline;
     width: max-content;
     text-align: right;
-    font: 2vw 'Montserrat';
+    font: 0.85rem 'Montserrat';
     margin: 0.5vh;
     color: #1d242c;
 }
@@ -87,8 +88,9 @@ article {
 }
 
 @media screen and (min-width: 640px) {
-    #author-name {
-        font-size: 1.3vw;
+
+    #article-title-2 {
+        font-size: 3vw;
     }
 
     #name,
@@ -101,9 +103,5 @@ article {
 @media screen and (min-width: 1024px) {
     #body-1 {
         font-size: 1rem;
-    }
-
-    #author-name {
-        font-size: 0.8vw;
     }
 }
