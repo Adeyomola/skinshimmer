@@ -17,7 +17,7 @@ summary {
     display: flex;
     flex-direction: column;
     padding: 1rem 0.7rem;
-    font-family: 'Nunito';
+    font-family: 'Cabin';
     margin: 0 1rem;
     color: #1d242c;
     border-bottom: 1px solid #1d242c;
@@ -55,7 +55,7 @@ summary>img {
 }
 
 #article-title {
-    font: 3.5vw 'Montserrat';
+    font: 3.5vw 'Cabin';
     font-weight: 600;
     text-decoration: none;
     color: #1d242c;

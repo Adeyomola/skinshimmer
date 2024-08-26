@@ -18,6 +18,7 @@ body {
     width: 100vw;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    background-color: #F2F2F2;
 }
 
 body {
@@ -36,7 +37,7 @@ body {
 /* index.html styling */
 #ourtoppicks {
     text-align: center;
-    font: 600 4vw 'Nunito';
+    font: 600 4vw 'Cabin';
     width: 100vw;
     margin: 0.5vw;
     padding: 0.5vh;

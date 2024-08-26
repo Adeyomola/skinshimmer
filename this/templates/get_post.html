@@ -7,7 +7,7 @@
     <meta name="description" content="Blossom; the Sun finds its way to you in search of the tales you'd tell.">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Nunito|Quicksand">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style_2.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/getpost.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/buttons.css') }}">
     <title>{{ post_row['title'] }}</title>
 </head>
@@ -41,6 +41,28 @@
                 value="Delete">Delete</button>
         </form>
     </div>
+    {% elif not session['user_id'] %}
+    <form action="" method="post" style="display: flex; flex-direction: column; align-items: center;">
+        <textarea name="name" id="name" style="resize: none; padding: 0.1rem; font-family: Montserrat;"
+            placeholder="Name" required></textarea>
+        <textarea name="comment" id="commentinput"
+            style="height: 20vh; resize: none; padding: 0.1rem; font-family: Montserrat; margin: 1rem;"
+            placeholder="Please leave a comment"></textarea>
+        <button type="submit">Submit Comment</button>
+    </form>
+    {% endif %}
+    {% if not session['user_id'] %}
+    <section style="display: flex; flex-direction: column; align-items: center;">
+        {% if comments %}
+        <p style="font: 1.5rem Cabin; font-weight: 600; text-decoration: underline;">Comments</p>
+        {% endif %}
+        {% for comment in comments %}
+        <summary id="comment" style="margin: 0.5rem;">
+            <p style="font: 1.2rem Cabin; font-weight: 600;">{{ comment['name'] }}:</p>
+            <p style="font: 0.9rem Montserrat;">{{ comment['comment'] }}</p>
+        </summary>
+        {% endfor %}
+    </section>
     {% endif %}
     {% endblock %}
 </body>

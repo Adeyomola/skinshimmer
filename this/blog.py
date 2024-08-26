@@ -65,7 +65,7 @@ def post():
     connection.close()
     return render_template('post.html', posts=posts)
 
-@bp.route('/<post_category>/<post_title>')
+@bp.route('/<post_category>/<post_title>', methods=['GET', 'POST'])
 def get_post(post_title, post_category):
     connection = get_db()
     Verify.verify_post(post_title, table, connection)
@@ -74,12 +74,36 @@ def get_post(post_title, post_category):
     post_row = connection.execute(statement)
     post_row = ResultProxy.fetchone(post_row)
 
+    tab = md.tables['comments']
+    get_comments = (select(tab).where(tab.c.post == post_row[0]))
+    comments = connection.execute(get_comments).fetchmany(5)
+
     users = md.tables['users']
     author_image = connection.execute((select(users.c.image_url).where(users.c.id == post_row[1])))
     author_image = ResultProxy.fetchone(author_image)[0]
 
+    if request.method == 'POST':
+        error = None
+        comment = request.form['comment']
+        name = request.form['name']
+        
+        if error is None:
+            try:
+                statement = (insert(tab).values(post=post_row[0], name=name, comment=comment))
+                connection.execute(statement)
+                connection.commit()
+                return redirect("/" + post_category + "/" + post_title)
+            except IntegrityError as ie:
+                error = ie._message()
+                connection.rollback()
+                if re.search('comment', error):
+                    error = "Duplicate comment"
+            finally:
+                connection.close()
+        flash(error)
+
     connection.close()
-    return render_template('get_post.html', post_row=post_row, author_image=author_image)
+    return render_template('get_post.html', post_row=post_row, author_image=author_image, comments=comments)
 
 @bp.route('/post/update/<post_title>',  methods=['GET', 'POST'])
 @login_required

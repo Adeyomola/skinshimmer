@@ -20,7 +20,7 @@ select {
 }
 
 select {
-    width: 20vw;
+    width: fit-content;
 }
 
 select:hover {
@@ -37,8 +37,7 @@ button {
     margin: 0;
 }
 
-#postimage,
-#inlineImage {
+#postimage {
     opacity: 0;
     z-index: -1;
     position: absolute;
@@ -48,7 +47,7 @@ label {
     width: fit-content;
     margin: 0.1rem 0.1rem;
     padding: 0.5rem;
-    font: 500 0.8vw 'Nunito';
+    font: 500 2.5vw 'Nunito';
     color: #1d242c;
     border-radius: 0.2rem;
     border: none;
@@ -69,9 +68,8 @@ label:hover {
         font-size: 1.5vw;
     }
 
-    select {
-        width: 9vw;
-        font-size: 1.5vw;
+    select, label {
+        font-size: 1.3vw;
     }
 }
 
@@ -82,7 +80,7 @@ label:hover {
         font-size: 1.2vw;
     }
 
-    select {
+    select, label {
         font-size: 1.2vw;
     }
 }
@@ -94,7 +92,7 @@ label:hover {
         font-size: 0.8vw;
     }
 
-    select {
+    select, label {
         font-size: 0.8vw
     }
 }

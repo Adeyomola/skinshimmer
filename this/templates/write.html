@@ -48,11 +48,11 @@
         <button id="superscript" class="editorbuttons"><i class="fa fa-superscript"></i></button>
         <button id="createLink" class="editorbuttons"><i class="fa fa-link"></i></button>
         <button id="unlink" class="editorbuttons"><i class="fa fa-unlink"></i></button>
+        <button id="outdent" class="editorbuttons"><i class="fa fa-outdent"></i></button>
+        <button id="indent" class="editorbuttons"><i class="fa fa-indent"></i></button>
     </div>
     <form method="post" enctype=multipart/form-data>
         <input type="text" id="article-title-1" placeholder="Title:" name="title" autocomplete="off" required>
-        <!-- <textarea name="body" id="body" contenteditable="true" placeholder="Scribble..." autocomplete="off"
-            required></textarea> -->
         <input type="hidden" id="hiddeninput" name="body">
         <div id="body" contenteditable="true">
         </div>
@@ -70,6 +70,8 @@
     <!-- PopUp -->
     <div id="linkPopUp"
         style="display: none; width: 100vw; height: 100vh; position: fixed; font: 0.8rem 'Nunito'; z-index: 100; background-color: #1d242c1a;  align-items: center; justify-content: center;">
+        <button id="closePopUp" style="position: absolute; right: 10px; top: 1px; border: none; font-size: x-large;"
+            onclick="document.getElementById('linkPopUp').style.display='none'">X</button>
         <div style="background-color: #4a678a93; padding: 1rem; border-radius: 0.2rem;">Enter a URL:
             <input id="link" type="text" value="https://" style="outline: none;">
             <button id="linkButton"

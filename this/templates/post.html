@@ -7,7 +7,7 @@
     <meta name="description" content="Blossom; the Sun finds its way to you in search of the tales you'd tell.">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Nunito|Quicksand">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style_2.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/buttons.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/content.css') }}">
     <title>All Posts</title>
@@ -30,7 +30,10 @@
                 <img src="../static/images/placeholder.webp">
                 {% endif %}
                 <a href="/{{ post ['category'] }}/{{ post['title']}}" id="article-title">{{ post['title'] | safe }}</a>
-                <a href="/{{ post ['category'] }}/{{ post['title']}}" id="preview">{{ post['body'] | striptags }}</a>
+                <a href="/{{ post ['category'] }}/{{ post['title']}}" id="preview">{{ post['body'] | replace(" ",
+                    "//space//") | replace("<br>",
+                    "//nbsp//") | replace("<div>",
+                        "//nbsp//") | striptags | replace("//space//", " " ) | replace("//nbsp//", "\n") }}</a>
             </summary>
             {% endfor %}
         </section>

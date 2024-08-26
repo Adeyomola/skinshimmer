@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/content.css') }}">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <title>Butter Skin</title>
+    <title>Skincare & More</title>
 
 </head>
 
@@ -28,7 +28,10 @@
                 <img src="../static/images/placeholder.webp">
                 {% endif %}
                 <a href="/{{ post ['category'] }}/{{ post['title']}}" id="article-title">{{ post['title'] | safe }}</a>
-                <a href="/{{ post ['category'] }}/{{ post['title']}}" id="preview">{{ post['body'] | striptags }}</a>
+                <a href="/{{ post ['category'] }}/{{ post['title']}}" id="preview">{{ post['body'] | replace(" ",
+                    "//space//") | replace("<br>",
+                    "//nbsp//") | replace("<div>",
+                        "//nbsp//") | striptags | replace("//space//", " " ) | replace("//nbsp//", "\n") }}</a>
             </summary>
             {% endfor %}
         </section>

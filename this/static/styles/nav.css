@@ -2,24 +2,16 @@
     header {
         display: grid;
         grid-template-columns: auto auto;
-        background-size: cover;
         padding: 0.5rem;
-        background-color: #1d242c;
+        /* background-color: #1d242c; */
     }
 
     #title {
-        display: flex;
-        flex-direction: column;
-        font: 4vh 'Montserrat';
+        font: 4vw 'Cabin';
         font-weight: 600;
-        color: burlywood;
+        color: #509056;
         text-decoration: none;
-        width: fit-content;
-    }
-
-    #tagline {
-        font: italic 2vh 'Montserrat';
-        color: burlywood;
+        margin-left: 6.3vw;
     }
 
     /* nav */
@@ -31,15 +23,13 @@
     }
 
     nav a {
-        margin: 0.5rem;
-        font: 2.5vw 'Montserrat';
-        font-weight: 100;
-        color: burlywood;
+        font: 2.8vw 'Cabin';
+        font-weight: 400;
+        color: #509056;
         text-decoration: none;
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        margin-right: 6.3vw;
     }
 
     a:hover {
@@ -54,24 +44,35 @@
     }
 
     @media screen and (min-width: 1024px) {
+        #title {
+            font-size: 2.5vw;
+            font-weight: 600;
+        }
+
         nav a {
             font-size: 1.3vw;
         }
     }
 
     @media screen and (min-width: 1280px) {
+        #title {
+            font-size: 2.5vw;
+            font-weight: 600;
+        }
+
         header {
             background-size: 100% 200%;
         }
 
         nav a {
-            font-size: 0.9vw;
+            font-size: 1vw;
         }
     }
 
     @media screen and (min-width: 480px) and (max-width: 1023px) and (orientation: landscape) {
-        #tagline {
-            font-size: 1.5vw;
+        #title {
+            font-size: 3vw;
+            font-weight: 600;
         }
 
         nav a {

@@ -23,4 +23,10 @@ def metadata():
     Column('image_url', NVARCHAR),
     Column('category', Text, nullable=False)
     )
+    comments = Table(
+    'comments', md,
+    Column('post', Integer),
+    Column('name', Text, nullable=False),
+    Column('comment', Text, nullable=False, unique=True),
+    )
     return md

@@ -23,6 +23,8 @@ const buttons = [
   "createLink",
   "unlink",
   "formatBlock",
+  "outdent",
+  "indent",
 ];
 
 // variables for selection preservation
@@ -121,16 +123,20 @@ body.addEventListener("paste", (e) => {
   let reader = new FileReader();
   const image = document.createElement("img");
 
-  reader.readAsDataURL(data);
+  if (data) {
+    reader.readAsDataURL(data);
 
-  preserveSelection();
+    preserveSelection();
 
-  restoreSelection();
+    restoreSelection();
 
-  reader.addEventListener("load", () => {
-    selected.innerHTML =
-      "<br> <img height=400 style='display: block; margin: 0 auto' src=" +
-      reader.result +
-      "> </img>";
-  });
+    reader.addEventListener("load", () => {
+      selected.innerHTML =
+        "<br> <img height=400 style='display: block; margin: 0 auto' src=" +
+        reader.result +
+        "> </img>";
+    });
+  } else {
+    document.execCommand("removeFormat");
+  }
 });

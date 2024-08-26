@@ -1,18 +1,15 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='styles/nav.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
 <script src="{{ url_for('static', filename='js/firstLoad.js')}}" defer></script>
 <header>
-    <div id="title">
-        <a id="title" title="home" href="{{ url_for ('home') }}">
-            Skin Shimmer
-        </a>
-        <p id="tagline">skincare, hair care, and more</p>
-    </div>
+    <a id="title" title="home" href="{{ url_for ('home') }}">
+        Skincare&More
+    </a>
     <nav>
         <a href="{{ url_for ('blog.post') }}" title="posts">
-            <!-- <svg width="30" height="30" viewBox="0 0 30 30">
-                <polygon points="20,26 4,26, 4,4 14,4 14,10 20,10 15,4 20,10" stroke="burlywood" fill="none"
-                    stroke-linejoin="round" />
-            </svg> -->
             All Posts</a>
     </nav>
 </header>
