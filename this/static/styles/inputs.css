@@ -13,6 +13,7 @@ label {
 input {
     border: transparent;
     outline: none;
+    background-color: #F2F2F2;
 }
 
 form>* {
