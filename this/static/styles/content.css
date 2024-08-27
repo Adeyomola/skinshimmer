@@ -1,24 +1,24 @@
-hr {
-    width: 20%;
-    border: 1.5px solid #1d242c;
-}
-
 #link-container {
     width: 100vw;
     height: 100%;
+    margin-top: 1rem;
+}
+
+#ourtoppicks {
+    font-size: 1rem;
 }
 
 section {
     display: grid;
-    margin: 0 3rem;
+    margin: 0 2rem;
 }
 
 summary {
     display: flex;
     flex-direction: column;
-    padding: 1rem 0.7rem;
+    padding: 0.5rem 0.7rem 0.5rem 0.7rem;
     font-family: 'Cabin';
-    margin: 0 1rem;
+    margin: 0 1rem 1rem 1rem;
     color: #1d242c;
     border-bottom: 1px solid #1d242c;
     overflow: hidden;
@@ -48,14 +48,14 @@ summary>img {
         -webkit-box-orient: vertical;
         transform: none;
         font-weight: 100;
-        font-size: 2.5vw;
+        font-size: 0.8rem;
         text-decoration: none;
         color: #1d242c;
     }
 }
 
 #article-title {
-    font: 3.5vw 'Cabin';
+    font: 1rem 'Cabin';
     font-weight: 600;
     text-decoration: none;
     color: #1d242c;
@@ -63,71 +63,64 @@ summary>img {
     text-transform: uppercase;
 }
 
-@media screen and (min-width: 480px) {
-    hr {
-        width: 10%;
-        margin: 0 auto;
-        border: 2px solid #1d242c;
-    }
-
-    #ourtoppicks {
-        font-size: 1.8vw;
-    }
-
+@media screen and (min-width: 421px) {
     #welcome {
         text-align: center;
     }
 
     section {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        margin: 0 5rem;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 1rem;
     }
 
     summary {
         font-size: initial;
     }
-
-    #article-title {
-        font-size: 1.8vw;
-    }
-
-    #preview {
-        @supports (-webkit-line-clamp: 3) {
-            font-size: 1.5vw;
-        }
-    }
 }
 
-@media screen and (min-width: 1024px) {
-    hr {
-        width: 5%;
+@media screen and (min-width: 540px) {
+    #welcome {
+        text-align: center;
     }
 
     section {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    #article-title {
-        font-size: 1.6vw;
+    summary {
+        font-size: initial;
+    }
+}
+
+@media screen and (min-width: 921px) {
+    #ourtoppicks {
+        font-size: 1.2rem;
+    }
+
+    section {
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0 3rem;
     }
 
     #preview {
         @supports (-webkit-line-clamp: 3) {
-            font-size: 1.3vw;
+            font-size: 0.9rem;
         }
     }
 }
 
 @media screen and (min-width: 1280px) {
+    section {
+        margin: 0 5rem;
+    }
+
     #article-title {
-        font-size: 1.3vw;
+        font-size: 1.2rem;
     }
 
     #preview {
         @supports (-webkit-line-clamp: 3) {
-            font-size: 1vw;
+            font-size: 1rem;
         }
     }
 }
