@@ -42,7 +42,7 @@ article {
 }
 
 #body-1 {
-    width: 70%;
+    width: 85%;
     max-width: 90%;
     min-height: 70vh;
     margin-bottom: 5vh;
@@ -103,5 +103,6 @@ article {
 @media screen and (min-width: 1024px) {
     #body-1 {
         font-size: 1rem;
+        width: 70%;
     }
 }
