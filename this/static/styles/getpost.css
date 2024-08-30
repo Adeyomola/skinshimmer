@@ -34,6 +34,11 @@ body {
 }
 
 /* styling for get post */
+#postimage {
+    width: 342px;
+    height: 191px;
+}
+
 article {
     display: flex;
     max-height: max-content;
@@ -104,5 +109,10 @@ article {
     #body-1 {
         font-size: 1rem;
         width: 70%;
+    }
+
+    #postimage {
+        width: 556px;
+        height: 310px;
     }
 }
