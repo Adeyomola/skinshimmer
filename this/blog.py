@@ -14,12 +14,13 @@ bp = Blueprint('blog', __name__, template_folder='templates', static_folder='sta
 md = metadata()
 table = md.tables['post']
 
-def author_posts():
+@bp.route('/author/<author_name>', strict_slashes=False)
+def author_posts(author_name):
     connection = get_db()
-    statement = (select(table).where(table.c.author_id == session['user_id']))
+    statement = (select(table).where(table.c.firstname == author_name))
     posts = connection.execute(statement).fetchall()
     connection.close()
-    return posts
+    return render_template('post.html', posts=posts)
 
 def front_posts():
     connection = get_db()

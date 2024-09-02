@@ -22,7 +22,8 @@
             {% if author_image %}
             <img src="{{ author_image }}" height="20" width="20" style="border-radius: 50%;">
             {% endif %}
-            <p>Written By <strong>{{ post_row['firstname'] }}</strong></p>
+            <p>Written By <strong><a href="/author/{{ post_row['firstname'] }}">{{ post_row['firstname'] }}</a></strong>
+            </p>
         </div>
         <div id="body-1"> {{ post_row['body'] | safe }} </div>
     </article>
