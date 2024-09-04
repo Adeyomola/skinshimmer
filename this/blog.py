@@ -1,7 +1,7 @@
 from .db import get_db
 from .metadata import metadata
 from flask import request, render_template, flash, redirect, session, Blueprint, g, url_for
-from sqlalchemy import insert, select, delete, update
+from sqlalchemy import insert, select, delete, update, desc
 from sqlalchemy.engine import ResultProxy
 from sqlalchemy.exc import IntegrityError
 from .auth import login_required
@@ -24,8 +24,8 @@ def author_posts(author_name):
 
 def front_posts():
     connection = get_db()
-    statement = (select(table))
-    posts = connection.execute(statement).fetchmany(8)
+    statement = (select(table).order_by(desc(table.c.id)).limit(12))
+    posts = connection.execute(statement)
     connection.close()
     return posts
 
