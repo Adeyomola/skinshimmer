@@ -30,7 +30,7 @@
     <div class="flash">{{ message }}</div>
     {% endfor %}
     {% block content %}
-    <div style="width: 100vw; text-align: center;"> {{ bio }}</div>
+    <div style="width: 100vw; text-align: center;"> {{ bio['bio'] }}</div>
     <div id="link-container">
         <section>
             {% for post in posts %}

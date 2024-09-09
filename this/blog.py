@@ -21,8 +21,8 @@ def author_posts(author_name):
     posts = connection.execute(statement).fetchall()
 
     statement2 = (select(md.tables['users']).where(md.tables['users'].c.username == author_name))
-    bio = connection.execute(statement2).fetchone()['bio']
-    
+    bio = connection.execute(statement2).fetchone()
+
     connection.close()
     return render_template('author.html', posts=posts, bio=bio)
 
