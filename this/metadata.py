@@ -10,7 +10,8 @@ def metadata():
     Column('username', String(255), unique=True),
     Column('password', String(255)),
     Column('email', String(255), unique=True),
-    Column('image_url', String(255))
+    Column('image_url', String(255)),
+     Column('bio', String(255))
         )
     post = Table(
     'post', md,

@@ -19,8 +19,12 @@ def author_posts(author_name):
     connection = get_db()
     statement = (select(table).where(table.c.firstname == author_name))
     posts = connection.execute(statement).fetchall()
+
+    statement2 = (select(md.tables['users']).where(md.tables['users'].c.username == author_name))
+    bio = connection.execute(statement2).fetchone()['bio']
+    
     connection.close()
-    return render_template('post.html', posts=posts)
+    return render_template('author.html', posts=posts, bio=bio)
 
 def front_posts():
     connection = get_db()
