@@ -20,7 +20,7 @@ class Verify:
     
     def verify_post(post_title, post_category, table, connection):
         row = connection.execute((select(table).where(table.c.title == post_title and table.c.category == post_category))) 
-        row = ResultProxy.fetchone(row)
+        row = ResultProxy.fetchall(row)
         if row is None:
             abort(404, f'Post does not exist')
         connection.rollback()
