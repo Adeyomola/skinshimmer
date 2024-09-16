@@ -114,7 +114,7 @@ def get_post(post_title, post_category):
 @login_required
 def update_post(post_title):
     connection = get_db()
-    # Verify.verify_author(post_title, table, connection)
+    Verify.verify_author(post_title, table, connection)
     post_row = ResultProxy.fetchone(connection.execute(select(table).where(table.c.title == post_title)))
     if request.method == 'POST':
         try:
