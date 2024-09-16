@@ -19,7 +19,7 @@ class Verify:
         connection.rollback()
     
     def verify_post(post_title, post_category, table, connection):
-        row = connection.execute((select(table).where(table.c.category == post_category))) 
+        row = connection.execute((select(table).where(table.c.category == post_category).where(table.c.title == post_title))) 
         row = ResultProxy.fetchone(row)
         if row is None:
             abort(404, f'Post does not exist')
