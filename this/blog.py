@@ -73,11 +73,11 @@ def post():
 @bp.route('/<post_category>/<post_title>', methods=['GET', 'POST'])
 def get_post(post_title, post_category):
     connection = get_db()
-    # Verify.verify_post(post_title, post_category, table, connection)
+    Verify.verify_post(post_title, post_category, table, connection)
 
     statement = (select(table).where(table.c.title == post_title and table.c.category == post_category))
     post_row = connection.execute(statement)
-    post_row = ResultProxy.fetchone(post_row)
+    post_row = ResultProxy.fetchall(post_row)
 
     tab = md.tables['comments']
     get_comments = (select(tab).where(tab.c.post == post_row[0]))
