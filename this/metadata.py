@@ -22,7 +22,7 @@ def metadata():
     Column('title', VARCHAR(255), nullable=False),
     Column('body', Text, nullable=False),
     Column('image_url', String(255)),
-    Column('category', Text, nullable=False)
+    Column('category', VARCHAR(255), nullable=False)
     )
     comments = Table(
     'comments', md,
