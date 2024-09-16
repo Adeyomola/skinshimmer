@@ -8,6 +8,7 @@ from .auth import login_required
 import re
 from .uploads import Upload
 from .verify import Verify
+import urllib.parse as up
 
 bp = Blueprint('blog', __name__, template_folder='templates', static_folder='static', static_url_path='/blog/static')
 
@@ -73,7 +74,7 @@ def post():
 @bp.route('/<post_category>/<post_title>', methods=['GET', 'POST'])
 def get_post(post_title, post_category):
     connection = get_db()
-    Verify.verify_post(post_title, post_category, table, connection)
+    Verify.verify_post(up.unquote(post_title), post_category, table, connection)
 
     statement = (select(table).where(table.c.title == post_title).where(table.c.category == post_category))
     post_row = connection.execute(statement)
