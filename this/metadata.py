@@ -19,7 +19,7 @@ def metadata():
     Column('author_id', Integer, ForeignKey('users.id'), nullable=False),
     Column('firstname', String(255)),
     Column('created', TIMESTAMP, default=datetime.datetime.now),
-    Column('title', Text, nullable=False),
+    Column('title', String(255), nullable=False),
     Column('body', Text, nullable=False),
     Column('image_url', String(255)),
     Column('category', Text, nullable=False)
