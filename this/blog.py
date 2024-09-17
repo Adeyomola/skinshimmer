@@ -99,7 +99,7 @@ def get_post(fragment, post_category):
                 statement = (insert(tab).values(post=post_row[0], name=name, comment=comment))
                 connection.execute(statement)
                 connection.commit()
-                return redirect("/" + post_category + "/" + post_title)
+                return redirect("/" + post_category + "/" + fragment)
             except IntegrityError as ie:
                 error = ie._message()
                 connection.rollback()

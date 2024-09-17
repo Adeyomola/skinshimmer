@@ -34,16 +34,39 @@ body {
 }
 
 /* styling for get post */
-#postimage {
-    width: 342px;
-    height: 191px;
-}
-
 article {
     display: flex;
     max-height: max-content;
     flex-direction: column;
     align-items: center;
+}
+
+
+#postimage {
+    width: 342px;
+    height: 191px;
+    padding: 0.5rem;
+    margin-top: 5vh;
+}
+
+#article-title-2 {
+    width: 85%;
+    max-width: fit-content;
+    text-align: left;
+    font: 5vw 'Cabin';
+    font-weight: 600;
+    color: #1d242c;
+    margin: 0.5vh;
+    padding: 0.5rem;
+}
+
+#author-name {
+    display: inline;
+    width: max-content;
+    text-align: right;
+    font: 0.85rem 'Montserrat';
+    margin: 0.5vh;
+    color: #1d242c;
 }
 
 #body-1 {
@@ -58,24 +81,7 @@ article {
     line-height: 1.5rem;
 }
 
-#article-title-2 {
-    width: fit-content;
-    text-align: center;
-    font: 5vw 'Cabin';
-    font-weight: 600;
-    color: #1d242c;
-    text-transform: uppercase;
-    margin: 0.5vh;
-}
 
-#author-name {
-    display: inline;
-    width: max-content;
-    text-align: right;
-    font: 0.85rem 'Montserrat';
-    margin: 0.5vh;
-    color: #1d242c;
-}
 
 /* edit delete, and update styling */
 #edit-delete-wrapper {
