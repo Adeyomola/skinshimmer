@@ -121,8 +121,7 @@ article {
 
 @media screen and (min-width: 1024px) {
     #postimage {
-        width: 70%;
-        height: 310px;
+        width: 45%;
     }
 
     #article-title-2 {
@@ -139,5 +138,4 @@ article {
         font-size: 1rem;
         width: 70%;
     }
-
 }
