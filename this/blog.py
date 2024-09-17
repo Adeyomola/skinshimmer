@@ -72,12 +72,12 @@ def post():
     connection.close()
     return render_template('post.html', posts=posts)
 
-@bp.route('/<post_category>/<post_title>', methods=['GET', 'POST'])
-def get_post(post_title, post_category):
+@bp.route('/<post_category>/<fragment>', methods=['GET', 'POST'])
+def get_post(fragment, post_category):
     connection = get_db()
-    Verify.verify_post(post_title, post_category, table, connection)
+    Verify.verify_post(fragment, post_category, table, connection)
 
-    statement = (select(table).where(table.c.title == post_title).where(table.c.category == post_category))
+    statement = (select(table).where(table.c.fragment == fragment).where(table.c.category == post_category))
     post_row = connection.execute(statement)
     post_row = ResultProxy.fetchone(post_row)
 
