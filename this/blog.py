@@ -39,7 +39,7 @@ def front_posts():
 def write():
     if request.method == 'POST':
         error = None
-        title = request.form['title']
+        title = request.form['title'].replace(" ", "-")
         body = request.form['body']
         category = request.form['category']
 
