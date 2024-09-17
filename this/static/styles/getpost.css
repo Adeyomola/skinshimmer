@@ -43,10 +43,14 @@ article {
 
 
 #postimage {
-    width: 342px;
+    width: 85%;
     height: 191px;
     padding: 0.5rem;
     margin-top: 5vh;
+}
+
+#postimage>img {
+    width: 100%;
 }
 
 #article-title-2 {
@@ -61,9 +65,8 @@ article {
 }
 
 #author-name {
-    display: inline;
-    width: max-content;
-    text-align: right;
+    width: 85%;
+    text-align: left;
     font: 0.85rem 'Montserrat';
     margin: 0.5vh;
     color: #1d242c;
