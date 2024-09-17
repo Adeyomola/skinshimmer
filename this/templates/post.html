@@ -40,8 +40,7 @@
                 {% if not post['image_url'] %}
                 <img src="../static/images/placeholder.webp">
                 {% endif %}
-                <a href="/{{ post ['category'] }}/{{ post['fragment']}}" id="article-title">{{ post['title'] | safe |
-                    replace("-", " ") }}</a>
+                <a href="/{{ post ['category'] }}/{{ post['fragment']}}" id="article-title">{{ post['title'] | safe }}</a>
                 <a href="/{{ post ['category'] }}/{{ post['fragment']}}" id="preview">{{ post['body'] | replace(" ",
                     "//space//") | replace("<br>",
                     "//nbsp//") | replace("<div>",

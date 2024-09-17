@@ -27,7 +27,7 @@
     {% extends 'nav.html' %}
     {% block content %}
     <article>
-        <div id="article-title-2"> {{ post_row['title'] | safe | replace("-", " ") }} </div>
+        <div id="article-title-2"> {{ post_row['title'] | safe }} </div>
         <img src="{{ post_row['image_url'] }}" alt="{{ post_row['title'] | safe }}" id="postimage">
         <div id="author-name" style="display: flex; flex-direction: column; align-items: center;">
             {% if author_image %}

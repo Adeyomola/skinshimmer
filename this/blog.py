@@ -39,10 +39,10 @@ def front_posts():
 def write():
     if request.method == 'POST':
         error = None
-        title = request.form['title'].replace(" ", "-")
+        title = request.form['title']
         body = request.form['body']
         category = request.form['category']
-        fragment = request.form['fragment']
+        fragment = request.form['fragment'].replace(" ", "-")
 
         connection = get_db()
         image_url = Upload.upload_file(Upload)
