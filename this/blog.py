@@ -42,12 +42,13 @@ def write():
         title = request.form['title'].replace(" ", "-")
         body = request.form['body']
         category = request.form['category']
+        fragment = request.form['fragment']
 
         connection = get_db()
         image_url = Upload.upload_file(Upload)
         if error is None:
             try:
-                statement = (insert(table).values(title=title, author_id=g.get('user')[0], firstname=g.get('user')[1], body=body, image_url=image_url, category=category))
+                statement = (insert(table).values(title=title, author_id=g.get('user')[0], firstname=g.get('user')[1], body=body, image_url=image_url, category=category, fragment=fragment))
                 connection.execute(statement)
                 connection.commit()
                 return redirect('/')
@@ -74,7 +75,6 @@ def post():
 @bp.route('/<post_category>/<post_title>', methods=['GET', 'POST'])
 def get_post(post_title, post_category):
     connection = get_db()
-    post_title = up(post_title)
     Verify.verify_post(post_title, post_category, table, connection)
 
     statement = (select(table).where(table.c.title == post_title).where(table.c.category == post_category))
