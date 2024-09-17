@@ -8,7 +8,7 @@ from .auth import login_required
 import re
 from .uploads import Upload
 from .verify import Verify
-from urllib.parse import urlunparse as up
+from urllib.parse import quote_plus as up
 
 bp = Blueprint('blog', __name__, template_folder='templates', static_folder='static', static_url_path='/blog/static')
 
