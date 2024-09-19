@@ -57,7 +57,6 @@ form>input {
     padding: 0.3rem;
     outline: none;
     color: #1d242c;
-    text-transform: capitalize;
 }
 
 #body {
@@ -78,6 +77,11 @@ form>input {
 
 #fragment {
     width: 50%;
+    font: 1rem 'Cabin';
+    border: 1px solid #d4d4d4;
+    padding: 0.2rem;
+    outline: none;
+    color: #1d242c;
 }
 
 @media screen and (min-width: 1024px) {

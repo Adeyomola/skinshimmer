@@ -136,7 +136,7 @@ def update_post(post_title):
 
             connection.execute((update(table).where(table.c.title == post_title).values(title=title, body=body, image_url=image_url, category=category)))
             connection.commit()
-            return redirect(url_for('blog.get_post', post_title=title, post_category=category))
+            return redirect(url_for('blog.get_post', fragment=post_row[8], post_category=category))
         finally:
             connection.close()
     connection.close()
