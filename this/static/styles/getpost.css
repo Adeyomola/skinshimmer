@@ -56,7 +56,6 @@ article {
 
 #article-title-2 {
     width: 85%;
-    max-width: fit-content;
     text-align: left;
     font: 5vw 'Cabin';
     font-weight: 600;
