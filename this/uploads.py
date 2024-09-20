@@ -48,7 +48,7 @@ class Upload:
         image = ImageOps.exif_transpose(image)
         
         image = image.convert('RGB')
-        image = image.resize((428, 239))
+        image = image.resize((642, 358.5))
         image_byte = io.BytesIO()
         image.save(image_byte, 'webp')
         return image_byte.getvalue()
