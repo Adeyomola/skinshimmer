@@ -17,7 +17,7 @@ def create_app():
         SECRET_KEY=secret_key,
         ENGINE= sqlalchemy.create_engine(f"mysql://{db_user}:{db_password}@{host}/{db_name}")
     )
-
+    app.debug = True
     from . import blog
     app.register_blueprint(blog.bp)
 
