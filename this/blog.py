@@ -125,7 +125,7 @@ def update_post(post_title):
                 image_url = Upload.upload_file(Upload)
             elif request.files['file'] and not post_row[6]:
                 image_url = Upload.upload_file(Upload)
-            elif post_row[6]:
+            elif post_row[6] and not request.files['file']:
                 image_url = post_row[6]
             else:
                 image_url = None
