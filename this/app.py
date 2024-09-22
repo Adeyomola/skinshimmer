@@ -1,10 +1,11 @@
 from flask import Flask, render_template, session, redirect
 import sqlalchemy
 import os
+import urllib.parse as up
 
 secret_key=os.environ.get('SECRET_KEY')
 
-db_password=os.environ.get('DB_PASSWORD')
+db_password=up.quote_plus(os.environ.get('DB_PASSWORD'))
 db_user=os.environ.get('DB_USER')
 host=os.environ.get('HOST')
 db_name=os.environ.get('DATABASE')
