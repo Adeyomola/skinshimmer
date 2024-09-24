@@ -29,6 +29,10 @@ def create_app():
     def home():
             return render_template('index.html', posts=blog.front_posts())
     
+    @app.route('/privacy', methods=['GET'])
+    def home():
+            return render_template('privacy.html')
+    
     @app.route('/logout')
     def logout():
         session.clear()
