@@ -30,7 +30,7 @@ def create_app():
             return render_template('index.html', posts=blog.front_posts())
     
     @app.route('/privacy', methods=['GET'])
-    def home():
+    def privacy():
             return render_template('privacy.html')
     
     @app.route('/logout')
