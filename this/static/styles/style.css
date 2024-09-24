@@ -52,6 +52,12 @@ body {
     margin-top: 1rem;
 }
 
+#privacy {
+    line-height: 1.5;
+    margin: 0 2rem;
+    font-family: 'Cabin';
+}
+
 @media screen and (min-width: 480px) {
     #ourtoppicks {
         font-size: 1.8vw;
@@ -59,9 +65,6 @@ body {
 
     #privacy {
         max-width: 50%;
-        line-height: 1.5;
-        margin: 0 2rem;
-        font: 'Cabin';
         max-width: 80%;
         transform: translate(5%, 0%);
     }
