@@ -30,9 +30,12 @@
     <div class="flash">{{ message }}</div>
     {% endfor %}
     {% block content %}
-    <div style="width: 100vw; text-align: center; padding: 0 5rem; font-family: 'Cabin'; font-style: italic;"> {{
-        bio['bio'] }}</div>
+
     <div id="link-container">
+        <div style="width: 100vw; text-align: center; padding: 0 5rem; font-family: 'Cabin'; font-style: italic;">
+            <p id="ourtoppicks">Meet the Author</p>{{
+            bio['bio'] }}
+        </div>
         <section>
             {% for post in posts %}
             <summary>
