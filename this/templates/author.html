@@ -33,9 +33,10 @@
 
     <div id="link-container">
         <div style="width: 100vw; text-align: center; padding: 0 5rem; font-family: 'Cabin'; font-style: italic;">
-            <p id="ourtoppicks">Meet the Author</p>{{
-            bio['bio'] }}
+            <p id="ourtoppicks" style="width: 100%;">Meet the Author</p>
+            <p id="bio" style="text-align: left;">{{ bio['bio'] }}</p>
         </div>
+        <p id="ourtoppicks" style="text-align: left; padding-left: 2.5rem">Here's what I've written so far:</p>
         <section>
             {% for post in posts %}
             <summary>

@@ -74,4 +74,8 @@ body {
         max-width: 50%;
         transform: translate(50%, 0%);
     }
+
+    #bio {
+        padding: 0rem 5rem 0.2rem 0.5rem;
+    }
 }
