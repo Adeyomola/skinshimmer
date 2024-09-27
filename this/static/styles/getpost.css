@@ -84,7 +84,9 @@ article {
     line-height: 1.5rem;
 }
 
-
+#body-1>* {
+    font-family: 'Cabin';
+}
 
 /* edit delete, and update styling */
 #edit-delete-wrapper {
