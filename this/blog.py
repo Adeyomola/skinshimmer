@@ -134,7 +134,7 @@ def update_post(post_title):
             if request.form['image_credit']:
                 image_credit = request.form['image_credit']
             else:
-                image_credit = ' '
+                image_credit = ''
 
             title = request.form['title']
             body = request.form['body']
