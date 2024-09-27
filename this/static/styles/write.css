@@ -73,7 +73,8 @@ form>input {
     background-color: white;
 }
 
-#fragment {
+#fragment,
+#image_credit {
     width: 50%;
     font: 1rem 'Garamond';
     border: 1px solid #d4d4d4;
@@ -93,7 +94,8 @@ form>input {
         width: 60%;
     }
 
-    #fragment {
+    #fragment,
+    #image_credit {
         width: 30%;
     }
 }
