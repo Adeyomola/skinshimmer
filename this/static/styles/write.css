@@ -1,6 +1,4 @@
 * {
-    --intro-line-font: 'Quicksand';
-    --intro-second-line: 'Caveat';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -68,7 +66,7 @@ form>input {
     outline: none;
     resize: none;
     padding: 0.5rem;
-    font: 1rem 'Garamond';
+    font: 1rem 'Cabin';
     font-weight: 500;
     overflow-y: scroll;
     margin-bottom: 0.2rem;
@@ -77,7 +75,7 @@ form>input {
 
 #fragment {
     width: 50%;
-    font: 1rem 'Cabin';
+    font: 1rem 'Garamond';
     border: 1px solid #d4d4d4;
     padding: 0.2rem;
     outline: none;
