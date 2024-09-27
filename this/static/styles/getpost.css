@@ -52,6 +52,11 @@ article {
     aspect-ratio: 10 / 5;
 }
 
+#postimage>a {
+    font: 0.85rem 'Montserrat';
+    color: #509056;
+}
+
 #article-title-2 {
     width: 85%;
     text-align: left;
