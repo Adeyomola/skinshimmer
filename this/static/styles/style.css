@@ -41,14 +41,6 @@ body {
     padding: 0.5vh;
 }
 
-#writtensofar {
-    text-align: center;
-    font: 600 4vw 'Cabin';
-    width: 100%;
-    margin: 0.5vw;
-    padding-left: 2.5rem;
-}
-
 /* home.html styling */
 
 #welcome {
@@ -66,7 +58,7 @@ body {
 
 @media screen and (min-width: 480px) {
 
-    #ourtoppicks, #writtensofar {
+    #ourtoppicks {
         font-size: 1.8vw;
     }
 
