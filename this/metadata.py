@@ -11,7 +11,7 @@ def metadata():
     Column('password', String(255)),
     Column('email', String(255), unique=True),
     Column('image_url', String(255)),
-    Column('bio', String(255))
+    Column('bio', String(500))
         )
     post = Table(
     'post', md,
@@ -23,7 +23,8 @@ def metadata():
     Column('body', Text, nullable=False),
     Column('image_url', String(255)),
     Column('category', VARCHAR(255), nullable=False),
-    Column('fragment', VARCHAR(255), nullable=False)
+    Column('fragment', VARCHAR(255), nullable=False),
+    Column('image_credit', VARCHAR(100))
     )
     comments = Table(
     'comments', md,
