@@ -133,6 +133,8 @@ def update_post(post_title):
             
             if request.form['image_credit']:
                 image_credit = request.form['image_credit']
+            elif not request.form['image_credit'] and post_row[9]:
+                image_credit = post_row[9]
             else:
                 image_credit = ''
 
