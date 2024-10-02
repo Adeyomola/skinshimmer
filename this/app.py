@@ -2,6 +2,7 @@ from flask import Flask, render_template, session, redirect
 import sqlalchemy
 import os
 import urllib.parse as up
+from datetime import timedelta
 
 secret_key=os.environ.get('SECRET_KEY')
 
@@ -16,7 +17,8 @@ def create_app():
 
     app.config.from_mapping(
         SECRET_KEY=secret_key,
-        ENGINE= sqlalchemy.create_engine(f"mysql://{db_user}:{db_password}@{host}/{db_name}")
+        ENGINE= sqlalchemy.create_engine(f"mysql://{db_user}:{db_password}@{host}/{db_name}"),
+        PERMANENT_SESSION_LIFETIME = timedelta(minutes=10)
     )
 
     from . import blog
