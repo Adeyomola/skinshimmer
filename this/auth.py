@@ -52,8 +52,8 @@ def login():
 
         if user is None:
             error = 'Incorrect email address or password'
-        # elif not check_password_hash(user[4], password):
-        #     error = 'Incorrect email address or password'
+        elif not check_password_hash(user[2], password):
+            error = 'Incorrect email address or password'
         if error is None:
             try:
                 session.clear()
