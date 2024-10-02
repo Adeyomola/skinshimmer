@@ -58,8 +58,7 @@ def login():
             try:
                 session.clear()
                 session['user_id'] = user[0]
-                session.permanent = True
-                
+
                 return redirect("/")
             finally:
                 connection.close()
