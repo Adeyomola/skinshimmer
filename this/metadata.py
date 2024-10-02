@@ -24,7 +24,8 @@ def metadata():
     Column('image_url', String(255)),
     Column('category', VARCHAR(255), nullable=False),
     Column('fragment', VARCHAR(255), nullable=False),
-    Column('image_credit', VARCHAR(100))
+    Column('image_credit', VARCHAR(100)),
+    Column('meta', VARCHAR(140)),
     )
     comments = Table(
     'comments', md,

@@ -44,12 +44,13 @@ def write():
         category = request.form['category']
         fragment = request.form['fragment'].replace(" ", "-")
         image_credit = request.form['image_credit']
+        meta = request.form['meta']
 
         connection = get_db()
         image_url = Upload.upload_file(Upload)
         if error is None:
             try:
-                statement = (insert(table).values(title=title, author_id=g.get('user')[0], firstname=g.get('user')[1], body=body, image_url=image_url, category=category, fragment=fragment, image_credit=image_credit))
+                statement = (insert(table).values(title=title, author_id=g.get('user')[0], firstname=g.get('user')[1], body=body, image_url=image_url, category=category, fragment=fragment, image_credit=image_credit, meta=meta))
                 connection.execute(statement)
                 connection.commit()
                 return redirect('/')
@@ -131,19 +132,14 @@ def update_post(post_title):
             else:
                 image_url = None
             
-            if request.form['image_credit']:
-                image_credit = request.form['image_credit']
-            elif not request.form['image_credit'] and post_row[9]:
-                image_credit = post_row[9]
-            else:
-                image_credit = ''
 
             title = request.form['title']
             body = request.form['body']
             category = request.form['category']
-            
+            image_credit = request.form['image_credit']
+            meta = request.form['meta']
 
-            connection.execute((update(table).where(table.c.title == post_title).values(title=title, body=body, image_url=image_url, category=category, image_credit=image_credit)))
+            connection.execute((update(table).where(table.c.title == post_title).values(title=title, body=body, image_url=image_url, category=category, image_credit=image_credit, meta = meta)))
             connection.commit()
             return redirect(url_for('blog.get_post', fragment=post_row[8], post_category=category))
         finally:
