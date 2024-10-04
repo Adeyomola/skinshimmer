@@ -53,13 +53,6 @@
                 value="Delete">Delete</button>
         </form>
     </div>
-    {% elif session['user_id'] == 1 %}
-    <div id="edit-delete-wrapper">
-        <form id="delete-form" action="{{ url_for ('blog.delete_post', post_title=post_row['title']) }}" method="post">
-            <button id="edit-delete" type="submit" onclick="return confirm ('Are you sure?')"
-                value="Delete">Delete</button>
-        </form>
-    </div>
     {% elif not session['user_id'] %}
     <form action="" method="post" style="display: flex; flex-direction: column; align-items: center;">
         <textarea name="name" id="name" style="resize: none; padding: 0.2rem; font-family: Montserrat;"
