@@ -33,13 +33,12 @@
             {% for post in posts %}
             <summary>
                 {% if post['image_url'] %}
-                <img src="{{ post['image_url'] }}" alt="{{ post_row['title'] | safe }}">
+                <img src="{{ post['image_url'] }}" >
                 {% endif %}
                 {% if not post['image_url'] %}
-                <img src="../static/images/placeholder.webp" alt="placeholder">
+                <img src="../static/images/placeholder.webp">
                 {% endif %}
-                <a href="/{{ post ['category'] }}/{{ post['fragment']}}" id="article-title">{{ post['title'] | safe
-                    }}</a>
+                <a href="/{{ post ['category'] }}/{{ post['fragment']}}" id="article-title">{{ post['title'] | safe }}</a>
                 <a href="/{{ post ['category'] }}/{{ post['fragment']}}" id="preview">{{ post['body'] | replace(" ",
                     "//space//") | replace("<br>",
                     "//nbsp//") | replace("<div>",
