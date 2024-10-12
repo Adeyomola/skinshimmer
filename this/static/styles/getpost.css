@@ -15,7 +15,7 @@ body {
     font-family: sans-serif;
     width: 100%;
     scroll-behavior: smooth;
-    background-color: #F2F2F2;
+    background-color: #fffcfc;
 }
 
 body {
@@ -121,7 +121,7 @@ footer a {
     display: inline;
     font: 2.8vw 'Cabin';
     font-weight: 400;
-    color: #509056;
+    color: white;
     text-decoration: none;
     margin: 0 5px 0 5px;
 }
