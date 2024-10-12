@@ -39,9 +39,9 @@ def create_app():
         session.clear()
         return redirect('/')
     
-    @app.route('sitemap.xml')
+    @app.route('/sitemap.xml')
     def sitemap():
-          return send_from_directory(app.static_folder, '/sitemap.xml')
+          return send_from_directory(app.static_folder, 'sitemap.xml')
 
     from . import db
     db.init_app(app)
