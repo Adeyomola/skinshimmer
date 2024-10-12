@@ -42,7 +42,11 @@ def create_app():
     @app.route('/sitemap.xml')
     def sitemap():
           return send_from_directory(app.static_folder, 'sitemap.xml')
-
+    
+    @app.route('/ads.txt')
+    def ads():
+          return send_from_directory(app.static_folder, 'ads.txt')
+    
     from . import db
     db.init_app(app)
     return app
