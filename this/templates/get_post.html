@@ -54,7 +54,7 @@
         </form>
     </div>
     {% elif not session['user_id'] %}
-    <form action="" method="post" style="display: flex; flex-direction: column; align-items: center;">
+    <form action="" method="post" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px">
         <textarea name="name" id="name" style="resize: none; padding: 0.2rem; font-family: Montserrat;"
             placeholder="Name" required></textarea>
         <textarea name="comment" id="commentinput"
@@ -64,7 +64,7 @@
     </form>
     {% endif %}
     {% if not session['user_id'] %}
-    <section style="display: flex; flex-direction: column; align-items: center;">
+    <section style="display: flex; flex-direction: column; align-items: center; margin-bottom: 50px">
         {% if comments %}
         <p style="font: 1rem Cabin; font-weight: 600; text-decoration: underline;">Comments</p>
         {% endif %}
@@ -76,8 +76,8 @@
         {% endfor %}
     </section>
     {% endif %}
+    {% include 'footer.html' %}
     {% endblock %}
-    {% extends 'footer.html' %}
 </body>
 
 </html>
