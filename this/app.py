@@ -39,7 +39,7 @@ def create_app():
         session.clear()
         return redirect('/')
     
-    @app.route('/sitemap.xml')
+    @app.route('/sitemap')
     def sitemap():
           return send_from_directory(app.static_folder, 'sitemap.xml')
     
