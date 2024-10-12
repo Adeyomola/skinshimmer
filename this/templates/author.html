@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/content.css') }}">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7394667149835180"
         crossorigin="anonymous"></script>
-    <title>All Posts | Butterskinned | Skincare, Hair, and More</title>
+    <title>Butterskinned | {{ bio['username'] }}</title>
 </head>
 
 <body>
@@ -62,6 +62,7 @@
         </section>
     </div>
     {% endblock %}
+    {% extends 'footer.html' %}
 </body>
 
 </html>

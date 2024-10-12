@@ -1,4 +1,4 @@
-from flask import Flask, render_template, session, redirect
+from flask import Flask, render_template, session, redirect, send_from_directory
 import sqlalchemy
 import os
 import urllib.parse as up
@@ -39,6 +39,10 @@ def create_app():
         session.clear()
         return redirect('/')
     
+    @app.route('sitemap.xml')
+    def sitemap():
+          return send_from_directory(app.static_folder, 'sitemap.xml')
+
     from . import db
     db.init_app(app)
     return app

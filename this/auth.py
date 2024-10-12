@@ -8,7 +8,7 @@ from werkzeug.exceptions import abort
 import re
 import functools
 
-bp = Blueprint('auth', __name__, template_folder='templates', static_folder='static', static_url_path='/auth/static')
+bp = Blueprint('auth', __name__, template_folder='templates', static_folder='static')
 
 md = metadata()
 table = md.tables['users']
