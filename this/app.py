@@ -47,6 +47,10 @@ def create_app():
     def ads():
           return send_from_directory(app.static_folder, 'ads.txt')
     
+    @app.route('/contact-us')
+    def contact():
+          return redirect('mailto:help@butterskinned.me')
+    
     from . import db
     db.init_app(app)
     return app
