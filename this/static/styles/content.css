@@ -63,6 +63,29 @@ summary>img {
     text-transform: uppercase;
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+    padding: 15px;
+    width: 100vw;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    display: inline;
+    font: 2.8vw 'Cabin';
+    font-weight: 400;
+    color: #509056;
+    text-decoration: none;
+    margin: 0 5px 0 5px;
+}
+
+footer a:hover {
+    scale: 1.05;
+}
+
 @media screen and (min-width: 421px) {
     #welcome {
         text-align: center;
@@ -75,6 +98,10 @@ summary>img {
 
     summary {
         font-size: initial;
+    }
+
+    footer a {
+        font-size: 1.8vw;
     }
 }
 
@@ -107,6 +134,10 @@ summary>img {
             font-size: 0.9rem;
         }
     }
+
+    footer a {
+        font-size: 1.3vw;
+    }
 }
 
 @media screen and (min-width: 1280px) {
@@ -122,5 +153,9 @@ summary>img {
         @supports (-webkit-line-clamp: 3) {
             font-size: 1rem;
         }
+    }
+
+    footer a {
+        font-size: 1vw;
     }
 }

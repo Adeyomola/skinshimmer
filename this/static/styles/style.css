@@ -17,8 +17,7 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden;
     background-color: #fffcfc;
-    height: 150vh;
-    min-height: 150vh;
+    min-height: 100vh;
 }
 
 body {
@@ -58,27 +57,6 @@ body {
     font-family: 'Cabin';
 }
 
-footer {
-    padding: 15px;
-    width: 100vw;
-    min-width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-footer a {
-    display: inline;
-    font: 2.8vw 'Cabin';
-    font-weight: 400;
-    color: #509056;
-    text-decoration: none;
-    margin: 0 5px 0 5px;
-}
-
-footer a:hover {
-    scale: 1.05;
-}
-
 @media screen and (min-width: 480px) {
 
     #ourtoppicks {
@@ -89,10 +67,6 @@ footer a:hover {
         max-width: 50%;
         max-width: 80%;
         transform: translate(5%, 0%);
-    }
-
-    footer a {
-        font-size: 1.8vw;
     }
 }
 
@@ -105,22 +79,5 @@ footer a:hover {
 
     #bio {
         padding: 0rem 5rem 0.2rem 5rem;
-    }
-
-    footer a {
-        font-size: 1.3vw;
-    }
-}
-
-@media screen and (min-width: 1280px) {
-    footer a {
-        font-size: 1vw;
-    }
-}
-
-@media screen and (min-width: 480px) and (max-width: 1023px) and (orientation: landscape) {
-
-    footer a {
-        font-size: 1.5vw;
     }
 }
