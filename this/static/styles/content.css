@@ -2,7 +2,7 @@
     width: 100vw;
     height: max-content;
     margin-top: 1rem;
-    min-height: 100vh;
+    min-height: max-content;
 }
 
 #ourtoppicks {
