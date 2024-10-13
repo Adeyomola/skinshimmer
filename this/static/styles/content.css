@@ -1,6 +1,6 @@
 #link-container {
     width: 100vw;
-    height: max-content;
+    height: 100%;
     margin-top: 1rem;
     min-height: max-content;
 }
