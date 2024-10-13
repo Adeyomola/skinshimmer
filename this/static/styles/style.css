@@ -17,6 +17,7 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden;
     background-color: #fffcfc;
+    min-height: max-content;
 }
 
 body {
