@@ -58,7 +58,7 @@ body {
 
 footer {
     position: relative;
-    bottom: 0;
+    bottom: -50vh;
     background-color: #1d242c;
     padding: 15px;
     width: 100vw;
