@@ -17,6 +17,8 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden;
     background-color: #fffcfc;
+    height: 100vh;
+    min-height: 100%;
 }
 
 body {
@@ -59,7 +61,6 @@ body {
 footer {
     position: relative;
     bottom: 0;
-    background-color: #1d242c;
     padding: 15px;
     width: 100vw;
     min-width: 100%;
@@ -71,7 +72,7 @@ footer a {
     display: inline;
     font: 2.8vw 'Cabin';
     font-weight: 400;
-    color: white;
+    color: #509056;
     text-decoration: none;
     margin: 0 5px 0 5px;
 }
