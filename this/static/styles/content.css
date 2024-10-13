@@ -65,11 +65,14 @@ summary>img {
 }
 
 footer {
+    position: absolute;
+    bottom: 0;
     padding: 15px;
     width: 100vw;
     min-width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 15px;
 }
 
 footer a {
