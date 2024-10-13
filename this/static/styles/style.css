@@ -17,8 +17,6 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden;
     background-color: #fffcfc;
-    min-height: 100vh;
-    border: 1px solid red;
 }
 
 body {
@@ -60,7 +58,7 @@ body {
 
 footer {
     position: relative;
-    bottom: 0;
+    bottom: -10vh;
     background-color: #1d242c;
     padding: 15px;
     width: 100vw;
