@@ -2,7 +2,7 @@
     width: 100vw;
     height: 100%;
     margin-top: 1rem;
-    min-height: 2 * max-content;
+    min-height: max-content;
 }
 
 #ourtoppicks {
@@ -13,6 +13,7 @@ section {
     display: grid;
     margin: 0 2rem;
     height: max-content;
+    min-width: 100%;
 }
 
 summary {
