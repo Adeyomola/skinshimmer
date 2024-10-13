@@ -59,8 +59,6 @@ body {
 }
 
 footer {
-    position: relative;
-    bottom: 0;
     padding: 15px;
     width: 100vw;
     min-width: 100%;
