@@ -3,14 +3,14 @@
 
 <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZD2DDJZRZ"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZD2DDJZRZ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'G-QZD2DDJZRZ');
-    </script>
+    </script> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta name="description" content="Skincare, Hair, and More">
@@ -34,8 +34,17 @@
         });
     </script>
 
-    <noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed</a></noscript>
-    <!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+    <!-- Performance Analytics -->
+    <script data-cookie-consent="tracking" async
+        src="https://www.googletagmanager.com/gtag/js?id=G-QZD2DDJZRZ"></script>
+    <script data-cookie-consent="tracking">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QZD2DDJZRZ');
+    </script>
+    <!-- end of Performance Analytics-->
     {% extends 'nav.html' %}
     {% block content %}
     <div id="link-container">
