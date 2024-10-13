@@ -66,7 +66,7 @@ summary>img {
 
 footer {
     position: absolute;
-    bottom: 0;
+    bottom: -50vh;
     padding: 15px;
     width: 100vw;
     min-width: 100%;
