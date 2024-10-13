@@ -17,8 +17,8 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden;
     background-color: #fffcfc;
-    min-height: 99vh;
-    height: 99vh;
+    min-height: 100vh;
+    height: 100vh;
 }
 
 body {
