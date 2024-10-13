@@ -2,6 +2,7 @@
     width: 100vw;
     height: 100%;
     margin-top: 1rem;
+    min-height: max-content;
 }
 
 #ourtoppicks {
@@ -100,11 +101,6 @@ footer a:hover {
         font-size: initial;
     }
 
-    footer {
-        position: absolute;
-        bottom: 0;
-    }
-
     footer a {
         font-size: 1.8vw;
     }
@@ -121,11 +117,6 @@ footer a:hover {
 
     summary {
         font-size: initial;
-    }
-
-    footer {
-        position: relative;
-        bottom: 0;
     }
 }
 
