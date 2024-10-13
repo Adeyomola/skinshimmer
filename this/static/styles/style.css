@@ -61,6 +61,7 @@ footer {
     bottom: 0;
     background-color: #1d242c;
     padding: 15px 15px 0 15px;
+    margin-bottom: 15px;
     width: 100vw;
     min-width: 100%;
     display: flex;
