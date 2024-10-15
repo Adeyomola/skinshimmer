@@ -74,7 +74,8 @@ form>input {
 }
 
 #fragment,
-#image_credit {
+#image_credit,
+#meta_description {
     width: 50%;
     font: 1rem 'Garamond';
     border: 1px solid #d4d4d4;
@@ -95,7 +96,8 @@ form>input {
     }
 
     #fragment,
-    #image_credit {
+    #image_credit,
+    #meta_description {
         width: 30%;
     }
 }
