@@ -115,9 +115,6 @@ buttons.forEach((element) => {
     element.onchange = (e) => {
       e.preventDefault();
       document.execCommand(command, false, element.value);
-    };
-    element.onmouseup = (e) => {
-      e.preventDefault();
       element.setAttribute("value", "p");
     };
   } else {
