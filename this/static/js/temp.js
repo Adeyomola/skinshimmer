@@ -1,5 +1,12 @@
 const body = document.getElementById("body");
 
+// insertparagraph with enter
+body.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    document.execCommand("insertParagraph", false);
+  }
+});
+
 // get popup elements
 const linkPopUp = document.getElementById("linkPopUp");
 const link = document.getElementById("link");
@@ -108,6 +115,10 @@ buttons.forEach((element) => {
     element.onchange = (e) => {
       e.preventDefault();
       document.execCommand(command, false, element.value);
+    };
+    element.onmouseup = (e) => {
+      e.preventDefault();
+      element.setAttribute("value", "p");
     };
   } else {
     element = document.getElementById(element);
