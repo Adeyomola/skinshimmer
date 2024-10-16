@@ -29,7 +29,7 @@
         text-decoration: none;
         display: flex;
         align-items: center;
-        margin-right: 2vw;
+        margin-right: 10px;
     }
 
     nav a:hover {
@@ -52,7 +52,6 @@
 
         nav a {
             font-size: 1.3vw;
-            margin-right: 6.3vw;
         }
     }
 
