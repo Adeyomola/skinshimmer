@@ -116,9 +116,9 @@ buttons.forEach((element) => {
       e.preventDefault();
       document.execCommand(command, false, element.value);
     };
-    document.getElementsByTagName("option").onmouseup = (e) => {
+    element.onmouseup = (e) => {
       e.preventDefault();
-      element.setAttribute("value", "p");
+      element.selectedIndex = 0;
     };
   } else {
     element = document.getElementById(element);

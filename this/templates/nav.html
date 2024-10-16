@@ -12,6 +12,8 @@
         <a href="{{ url_for ('blog.post') }}" title="posts">
             All Posts</a>
         {% if session %}
+        <a href="/write">
+            Write</a>
         <a href="/logout" title="posts">
             Log Out</a>
         {% endif %}
