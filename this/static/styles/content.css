@@ -1,6 +1,6 @@
 #link-container {
     width: 100vw;
-    height: 100dvh;
+    height: 100lvh;
     margin-top: 1rem;
     min-height: fit-content;
 }
@@ -65,7 +65,7 @@ summary>img {
 }
 
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     padding: 15px;
     width: 100vw;
