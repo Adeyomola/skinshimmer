@@ -92,15 +92,11 @@ article {
 }
 
 h2,
+h3,
 p,
 span,
-h3>div,
-h2>div {
-    margin-bottom: .2in;
-    line-height: 107%;
-}
-
-h3 {
+#body-1>div,
+#body-1>div>div {
     margin-bottom: .1in;
     line-height: 107%;
 }
