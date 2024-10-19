@@ -92,7 +92,11 @@ article {
 }
 
 #body-1>h2,
-#body-1>p {
+#body-1>div>h2,
+#body-1>h3,
+#body-1>div>h3,
+#body-1>p,
+#body-1>div>p {
     margin-bottom: .2in;
     line-height: 107%;
 }
