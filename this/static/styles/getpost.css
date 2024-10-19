@@ -91,6 +91,12 @@ article {
     font-family: 'Cabin';
 }
 
+#body-1>h2,
+#body-1>p {
+    margin-bottom: .2in;
+    line-height: 107%;
+}
+
 /* edit delete, and update styling */
 #edit-delete-wrapper {
     display: flex;
