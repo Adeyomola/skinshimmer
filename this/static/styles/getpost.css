@@ -96,7 +96,8 @@ h3,
 p,
 span,
 #body-1>div,
-#body-1>div>div {
+#body-1>div>div,
+#body-1>blockquote>div {
     margin-bottom: .1in;
     line-height: 140%;
 }
