@@ -1,12 +1,5 @@
 const body = document.getElementById("body");
 
-// insertparagraph with enter
-body.addEventListener("keyup", (e) => {
-  if (e.key === "Enter") {
-    document.execCommand("insertParagraph", false);
-  }
-});
-
 // get popup elements
 const linkPopUp = document.getElementById("linkPopUp");
 const link = document.getElementById("link");
