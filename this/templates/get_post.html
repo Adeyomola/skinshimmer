@@ -62,7 +62,7 @@
                         post_row['firstname'] }}</a></strong>
             </p>
         </div>
-        <div id="article-title-2"> {{ post_row['title'] | safe }} </div>
+        <h1 id="article-title-2"> {{ post_row['title'] | safe }} </h1>
         <div id="body-1"> {{ post_row['body'] | safe }} </div>
     </article>
     {% if session['user_id'] == post_row['author_id'] or session['user_id'] == 1 %}
