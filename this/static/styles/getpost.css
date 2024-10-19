@@ -91,14 +91,18 @@ article {
     font-family: 'Cabin';
 }
 
-h2,
+h2 {
+    margin-bottom: .1in;
+    line-height: 140%;
+}
+
 h3,
 p,
 span,
 #body-1>div,
 #body-1>div>div,
 #body-1>blockquote>div {
-    margin-bottom: .1in;
+    margin-bottom: .07in;
     line-height: 140%;
 }
 
