@@ -7,7 +7,7 @@
     }
 
     #title {
-        font: 1.3rem 'Cabin';
+        font: 1.5rem 'Cabin';
         font-weight: 600;
         color: #509056;
         text-decoration: none;
@@ -23,8 +23,8 @@
     }
 
     nav a {
-        font: 2.8vw 'Cabin';
-        font-weight: 400;
+        font: 19px 'Cabin';
+        font-weight: 600;
         color: #509056;
         text-decoration: none;
         display: flex;
@@ -36,45 +36,45 @@
         scale: 1.05;
     }
 
-
+/* 
     @media screen and (min-width: 640px) {
         nav a {
             font-size: 1.8vw;
         }
-    }
+    } */
 
     @media screen and (min-width: 1024px) {
         #title {
-            font-size: 1.5rem;
-            font-weight: 600;
+            font-size: 1.7rem;
+            /* font-weight: 600; */
             margin-left: 6.3vw;
         }
 
-        nav a {
+        /* nav a {
             font-size: 1.3vw;
-        }
+        } */
     }
 
     @media screen and (min-width: 1280px) {
-        #title {
+        /* #title {
             font-weight: 600;
-        }
+        } */
 
-        header {
+        /* header {
             background-size: 100% 200%;
-        }
+        } */
 
-        nav a {
+        /* nav a {
             font-size: 1vw;
-        }
+        } */
     }
 
     @media screen and (min-width: 480px) and (max-width: 1023px) and (orientation: landscape) {
-        #title {
+        /* #title {
             font-weight: 600;
-        }
+        } */
 
-        nav a {
+        /* nav a {
             font-size: 1.5vw;
-        }
+        } */
     }
