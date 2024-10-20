@@ -19,6 +19,7 @@ summary {
     color: #1d242c;
     border-bottom: 1px solid #1d242c;
     overflow: hidden;
+    justify-content: space-evenly;
 }
 
 summary:hover {
@@ -45,14 +46,14 @@ summary>img {
         -webkit-box-orient: vertical;
         transform: none;
         font-weight: 100;
-        font-size: 1.7vh;
+        font-size: 1.9vh;
         text-decoration: none;
         color: #1d242c;
     }
 }
 
 #article-title {
-    font: 1.8vh 'Cabin';
+    font: 2vh 'Cabin';
     font-weight: 600;
     text-decoration: none;
     color: #1d242c;
@@ -84,7 +85,7 @@ footer a:hover {
     scale: 1.05;
 }
 
-@media screen and (min-width: 421px) {
+@media screen and (min-width: 521px) {
     #welcome {
         text-align: center;
     }
@@ -103,7 +104,7 @@ footer a:hover {
     }
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 700px) {
     #welcome {
         text-align: center;
     }
@@ -127,12 +128,6 @@ footer a:hover {
         font-size: 1rem;
     }
 
-    #preview {
-        @supports (-webkit-line-clamp: 3) {
-            font-size: 0.9rem;
-        }
-    }
-
     footer a {
         font-size: 1.3vw;
     }
@@ -142,16 +137,6 @@ footer a:hover {
     section {
         grid-template-columns: repeat(4, 1fr);
         margin: 0 5rem;
-    }
-
-    #article-title {
-        font-size: 1.2rem;
-    }
-
-    #preview {
-        @supports (-webkit-line-clamp: 3) {
-            font-size: 1rem;
-        }
     }
 
     footer a {
