@@ -37,7 +37,7 @@ body {
 /* index.html styling */
 #ourtoppicks {
     text-align: center;
-    font: 600 4vw 'Cabin';
+    font: 600 3vh 'Cabin';
     width: 100vw;
     margin: 0.5vw;
     padding: 0.5vh;
@@ -59,10 +59,6 @@ body {
 }
 
 @media screen and (min-width: 480px) {
-
-    #ourtoppicks {
-        font-size: 1.8vw;
-    }
 
     #privacy {
         max-width: 50%;

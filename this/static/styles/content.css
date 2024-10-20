@@ -5,10 +5,6 @@
     min-height: fit-content;
 }
 
-#ourtoppicks {
-    font-size: 1rem;
-}
-
 section {
     display: grid;
     margin: 0 2rem;
@@ -40,23 +36,23 @@ summary>img {
     text-decoration: none;
     color: #1d242c;
 
-    @supports (-webkit-line-clamp: 2) {
+    @supports (-webkit-line-clamp: 3) {
         display: -webkit-box;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: initial;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         transform: none;
         font-weight: 100;
-        font-size: 0.8rem;
+        font-size: 1.7vh;
         text-decoration: none;
         color: #1d242c;
     }
 }
 
 #article-title {
-    font: 1rem 'Cabin';
+    font: 1.8vh 'Cabin';
     font-weight: 600;
     text-decoration: none;
     color: #1d242c;
@@ -103,11 +99,11 @@ footer a:hover {
     }
 
     footer a {
-        font-size: 1.8vw;
+        font-size: 1.8vh;
     }
 }
 
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 640px) {
     #welcome {
         text-align: center;
     }
@@ -122,13 +118,14 @@ footer a:hover {
 }
 
 @media screen and (min-width: 921px) {
-    #ourtoppicks {
-        font-size: 1.2rem;
-    }
 
     section {
         grid-template-columns: repeat(4, 1fr);
         margin: 0 3rem;
+    }
+
+    #article-title {
+        font-size: 1rem;
     }
 
     #preview {
