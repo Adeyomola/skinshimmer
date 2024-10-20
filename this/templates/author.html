@@ -15,7 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Skincare, Hair, and More">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Nunito|Quicksand">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/buttons.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/content.css') }}">
@@ -33,9 +32,10 @@
             cookieconsent.run({ "notice_banner_type": "interstitial", "consent_type": "express", "palette": "light", "language": "en", "page_load_consent_levels": ["strictly-necessary"], "notice_banner_reject_button_hide": false, "preferences_center_close_button_hide": false, "page_refresh_confirmation_buttons": false, "website_name": "Butterskinned.me", "website_privacy_policy_url": "https://butterskinned.me/privacy" });
         });
     </script>
-    
+
     <!-- Performance Analytics -->
-    <script data-cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-QZD2DDJZRZ"></script>
+    <script data-cookie-consent="tracking" async
+        src="https://www.googletagmanager.com/gtag/js?id=G-QZD2DDJZRZ"></script>
     <script data-cookie-consent="tracking">
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
