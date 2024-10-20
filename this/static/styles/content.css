@@ -104,7 +104,7 @@ footer a:hover {
     }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 760px) {
     #welcome {
         text-align: center;
     }
