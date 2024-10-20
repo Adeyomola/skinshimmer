@@ -98,10 +98,15 @@ h2 {
 
 h3,
 p,
-span,
 #body-1>div,
 #body-1>div>div,
 #body-1>blockquote>div {
+    margin-bottom: .07in;
+    line-height: 140%;
+}
+
+span {
+    display: inline-block;
     margin-bottom: .07in;
     line-height: 140%;
 }
