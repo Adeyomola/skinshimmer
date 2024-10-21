@@ -28,6 +28,7 @@ summary:hover {
 
 summary>img {
     padding-bottom: 0.5rem;
+    aspect-ratio: 1.79;
 }
 
 #preview {

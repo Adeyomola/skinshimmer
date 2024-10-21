@@ -28,7 +28,7 @@
                 <img src="{{ post['image_url'] }}" alt="{{ post['title'] | safe }}" height="55%" width="100%">
                 {% endif %}
                 {% if not post['image_url'] %}
-                <img src="../static/images/placeholder.webp" alt="placeholder" height="55.9%" width="100%">
+                <img src="../static/images/placeholder.webp" alt="placeholder" height="55%" width="100%">
                 {% endif %}
                 <a href="/{{ post ['category'] }}/{{ post['fragment']}}" id="article-title">{{ post['title'] | safe
                     }}</a>
