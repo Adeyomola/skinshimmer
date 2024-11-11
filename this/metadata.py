@@ -29,6 +29,7 @@ def metadata():
     )
     comments = Table(
     'comments', md,
+    Column('id', Integer, primary_key = True, autoincrement=True),
     Column('post', Integer),
     Column('name', Text, nullable=False),
     Column('comment', Text, nullable=False),
