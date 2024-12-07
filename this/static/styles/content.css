@@ -36,7 +36,7 @@ summary>img {
     text-overflow: ellipsis;
     overflow: hidden;
     text-decoration: none;
-    color: #1d242c;
+    color: #6c6262;
 
     @supports (-webkit-line-clamp: 3) {
         display: -webkit-box;
