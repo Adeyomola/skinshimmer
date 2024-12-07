@@ -1,31 +1,36 @@
     /* header */
     header {
-        display: grid;
-        grid-template-columns: auto auto;
+        display: flex;
+        flex-direction: column;
         padding: 0.5rem;
         /* background-color: #1d242c; */
     }
 
     #title {
-        font: 1.3rem 'Cabin';
+        font: 1.3rem 'Tangerine';
         font-weight: 600;
-        color: #509056;
+        color: #222222 !important;
         text-decoration: none;
-        margin-left: 2vw;
+        text-align: center;
+        margin: 2vw;
     }
 
     /* nav */
     nav {
         display: flex;
-        justify-content: right;
-        width: 100%;
-        max-width: 100%;
+        justify-content: center;
+        align-self: center;
+        width: 80%;
+        max-width: 80%;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        padding: 15px 0;
     }
 
     nav a {
         font: 2.8vw 'Cabin';
-        font-weight: 400;
-        color: #509056;
+        font-weight: 800;
+        color: #222222 !important;
         text-decoration: none;
         display: flex;
         align-items: center;
