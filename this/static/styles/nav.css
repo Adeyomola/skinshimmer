@@ -8,7 +8,7 @@
 
     #title {
         font: 3.3rem 'Tangerine';
-        font-weight: 600;
+        font-weight: 400;
         color: #222222 !important;
         text-decoration: none;
         text-align: center;
@@ -51,7 +51,6 @@
     @media screen and (min-width: 1024px) {
         #title {
             font-size: 3.5rem;
-            font-weight: 600;
             margin-left: 6.3vw;
         }
 
@@ -61,9 +60,6 @@
     }
 
     @media screen and (min-width: 1280px) {
-        #title {
-            font-weight: 600;
-        }
 
         header {
             background-size: 100% 200%;
@@ -75,9 +71,6 @@
     }
 
     @media screen and (min-width: 480px) and (max-width: 1023px) and (orientation: landscape) {
-        #title {
-            font-weight: 600;
-        }
 
         nav a {
             font-size: 1.5vw;
