@@ -62,29 +62,7 @@ summary>img {
     text-transform: uppercase;
 }
 
-footer {
-    position: relative;
-    bottom: 0;
-    padding: 15px;
-    width: 100vw;
-    min-width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 15vh;
-}
 
-footer a {
-    display: inline;
-    font: 2.8vw 'Cabin';
-    font-weight: 400;
-    color: #509056;
-    text-decoration: none;
-    margin: 0 5px 0 5px;
-}
-
-footer a:hover {
-    scale: 1.05;
-}
 
 @media screen and (min-width: 521px) {
     #welcome {
@@ -98,10 +76,6 @@ footer a:hover {
 
     summary {
         font-size: initial;
-    }
-
-    footer a {
-        font-size: 1.8vw;
     }
 }
 
@@ -128,19 +102,11 @@ footer a:hover {
     #article-title {
         font-size: 1rem;
     }
-
-    footer a {
-        font-size: 1.3vw;
-    }
 }
 
 @media screen and (min-width: 1280px) {
     section {
         grid-template-columns: repeat(4, 1fr);
         margin: 0 5rem;
-    }
-
-    footer a {
-        font-size: 1vw;
     }
 }
