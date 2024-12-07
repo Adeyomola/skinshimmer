@@ -8,7 +8,6 @@ footer {
     justify-content: center;
     margin-top: 15vh;
     background-color: #333;
-    color: #999;
 }
 
 footer a {
@@ -17,6 +16,7 @@ footer a {
     font-weight: 400;
     text-decoration: none;
     margin: 0 5px 0 5px;
+    color: #999;
 }
 
 footer a:hover {
