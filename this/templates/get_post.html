@@ -7,7 +7,7 @@
     <meta name="description" content="{{ post_row['meta'] }}">
     <meta property="og:image" content="{{ post_row['image_url'] }}">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Nunito">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/getpost.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/buttons.css') }}">
     {% include 'head.html' %}
@@ -30,7 +30,7 @@
             <img src="{{ author_image }}" alt="{{ post_row['firstname'] }}" height="35" width="35"
                 style="border-radius: 50%;">
             {% endif %}
-            <p>Written By <strong><a href="/author/{{ post_row['firstname'] }}" style="color: #509056">{{
+            <p>Written By <strong><a href="/author/{{ post_row['firstname'] }}" style="color: #333">{{
                         post_row['firstname'] }}</a></strong>
             </p>
         </div>
