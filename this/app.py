@@ -6,7 +6,7 @@ from datetime import timedelta
 
 secret_key=os.environ.get('SECRET_KEY')
 
-db_password=up.quote_plus(os.environ.get('DB_PASSWORD'))
+# db_password=up.quote_plus(os.environ.get('DB_PASSWORD'))
 db_user=os.environ.get('DB_USER')
 host=os.environ.get('HOST')
 db_name=os.environ.get('DATABASE')
@@ -18,7 +18,9 @@ def create_app():
     app.config.from_mapping(
         SECRET_KEY=secret_key,
         SEND_FILE_MAX_AGE_DEFAULT = 600,
-        ENGINE= sqlalchemy.create_engine(f"mysql://{db_user}:{db_password}@{host}/{db_name}")
+        # ENGINE= sqlalchemy.create_engine(f"mysql://{db_user}:{db_password}@{host}/{db_name}")
+        ENGINE= sqlalchemy.create_engine(f"sqlite:///{db_path}")
+
     )
 
     from . import blog
