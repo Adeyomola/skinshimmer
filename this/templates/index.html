@@ -32,7 +32,7 @@
                 <a href="/{{ post ['category'] }}/{{ post['fragment']}}" id="preview">{{ post['body'] | replace(" ",
                     "//space//") | replace("<br>",
                     "//nbsp//") | replace("<div>",
-                        "//nbsp//") | striptags | replace("//space//", " " ) | replace("//nbsp//", "\n") }}</a>
+                        "//nbsp//") | striptags | replace("//space//", " " ) | replace("//nbsp//", "\n") | truncate(160) }}</a>
             </summary>
             {% endfor %}
         </section>

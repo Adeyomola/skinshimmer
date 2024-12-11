@@ -47,18 +47,18 @@ summary>img {
         -webkit-box-orient: vertical;
         transform: none;
         font-weight: 100;
-        font-size: 16px;
+        font-size: 14.5px;
         text-decoration: none;
         color: #1d242c;
     }
 }
 
 #article-title {
-    font: 18px 'Cabin';
+    font: 16px 'Cabin';
     font-weight: 600;
     text-decoration: none;
     color: #1d242c;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
     text-transform: uppercase;
 }
 
@@ -76,6 +76,10 @@ summary>img {
 
     summary {
         font-size: initial;
+    }
+
+    #article-title {
+        font: 14px 'Cabin';
     }
 }
 
