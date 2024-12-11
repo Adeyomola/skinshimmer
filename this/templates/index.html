@@ -29,7 +29,7 @@
                 {% endif %}
                 <a href="/{{ post ['category'] }}/{{ post['fragment']}}" id="article-title">{{ post['title'] | safe
                     }}</a>
-                <a href="/{{ post ['category'] }}/{{ post['fragment']}}" id="preview">{{ post['body'] | replace(" ",
+                <a href="/{{ post ['category'] }}/{{ post['fragment']}}" id="preview">{{ post['meta'] | replace(" ",
                     "//space//") | replace("<br>",
                     "//nbsp//") | replace("<div>",
                         "//nbsp//") | striptags | replace("//space//", " " ) | replace("//nbsp//", "\n") | truncate(200, True, '..') }}</a>
