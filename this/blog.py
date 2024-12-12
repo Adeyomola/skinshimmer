@@ -138,10 +138,11 @@ def update_post(post_title):
             category = request.form['category']
             image_credit = request.form['image_credit']
             meta = request.form['meta']
+            fragment = request.form['fragment'].replace(" ", "-")
 
-            connection.execute((update(table).where(table.c.title == post_title).values(title=title, body=body, image_url=image_url, category=category, image_credit=image_credit, meta = meta)))
+            connection.execute((update(table).where(table.c.title == post_title).values(title=title, body=body, image_url=image_url, category=category, image_credit=image_credit, meta = meta, fragment=fragment)))
             connection.commit()
-            return redirect(url_for('blog.get_post', fragment=post_row[8], post_category=category))
+            return redirect(url_for('blog.get_post', fragment=fragment, post_category=category))
         finally:
             connection.close()
     connection.close()
