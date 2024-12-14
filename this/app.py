@@ -27,6 +27,9 @@ def create_app():
     from . import auth
     app.register_blueprint(auth.bp)
 
+    from . import redirects
+    app.register_blueprint(redirects.bp)
+
     @app.route('/', methods=['GET', 'POST'])
     def home():
             return render_template('index.html', posts=blog.front_posts())
