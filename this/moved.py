@@ -30,4 +30,12 @@ def f():
 def g():
     return redirect('/', code=301)
 
+@bp.route('/skincare/Peptides for Skincare')
+def h():
+    return redirect('/skincare/peptides-for-skincare-in-2025', code=301)
+
+@bp.route('/hair/Is Hair Transplant Possible Without Shaving Head')
+def i():
+    return redirect('/hair/hair-transplant-without-shaving-head', code=301)
+
 
