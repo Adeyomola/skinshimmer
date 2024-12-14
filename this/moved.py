@@ -23,11 +23,11 @@ def e():
     return redirect('/hair/vitamins-for-hair-growth-2025', code=301)
 
 @bp.route('/skincare/how-to-tighten-your-skin')
-def e():
+def f():
     return redirect('/skincare/how-to-tighten-your-skin-2025', code=301)
 
 @bp.route('/skincare/Lorem Ipsum')
-def e():
+def g():
     return redirect('/', code=301)
 
 
