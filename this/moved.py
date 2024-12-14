@@ -31,6 +31,7 @@ def g():
     return redirect('/', code=301)
 
 @bp.route('/skincare/Peptides for Skincare')
+@bp.route('/skincare/peptides-for-skincare')
 def h():
     return redirect('/skincare/peptides-for-skincare-in-2025', code=301)
 
