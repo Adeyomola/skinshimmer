@@ -27,8 +27,8 @@ def create_app():
     from . import auth
     app.register_blueprint(auth.bp)
 
-    from . import redirects
-    app.register_blueprint(redirects.bp)
+    from . import moved
+    app.register_blueprint(moved.bp)
 
     @app.route('/', methods=['GET', 'POST'])
     def home():

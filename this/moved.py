@@ -1,6 +1,6 @@
 from flask import redirect, Blueprint
 
-bp = Blueprint('redirects', __name__)
+bp = Blueprint('moved', __name__)
 
 @bp.route('/skincare/steps-for-a-skincare-routine')
 def a():
