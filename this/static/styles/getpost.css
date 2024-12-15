@@ -111,6 +111,15 @@ span {
     line-height: 140%;
 }
 
+tbody {
+    text-align: center;
+}
+
+tr:first-child {
+    background-color: #222222;
+    color: white;
+}
+
 /* edit delete, and update styling */
 #edit-delete-wrapper {
     display: flex;
