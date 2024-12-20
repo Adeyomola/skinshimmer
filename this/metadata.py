@@ -23,7 +23,7 @@ def metadata():
     Column('body', Text, nullable=False),
     Column('image_url', String(255)),
     Column('category', VARCHAR(255), nullable=False),
-    Column('fragment', VARCHAR(255), nullable=False),
+    Column('fragment', VARCHAR(255), nullable=False, unique=True),
     Column('image_credit', VARCHAR(200)),
     Column('meta', VARCHAR(140)),
     )

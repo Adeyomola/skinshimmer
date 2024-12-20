@@ -1,7 +1,7 @@
 from .db import get_db
 from .metadata import metadata
 from flask import request, render_template, flash, redirect, session, Blueprint, g, url_for
-from sqlalchemy import insert, select, delete, update, desc
+from sqlalchemy import insert, select, delete, update, desc, func
 from sqlalchemy.engine import ResultProxy
 from sqlalchemy.exc import IntegrityError
 from .auth import login_required
@@ -69,10 +69,22 @@ def write():
 @bp.route('/post', strict_slashes=False)
 def post():
     connection = get_db()
-    statement = (select(table))
+    page = request.args.get("p")
+
+    if page:
+        page = int(page)
+    else:
+        page = 1
+    
+    statement = (select(table).order_by(desc(table.c.id)).limit(12).offset((page - 1) * 12))
     posts = connection.execute(statement).fetchall()
+
+    row_count = select(func.count('*')).select_from(table)
+    total_rows = connection.execute(row_count).scalar()
+    total_pages = (total_rows + 12 - 1)//12
+
     connection.close()
-    return render_template('post.html', posts=posts)
+    return render_template('post.html', posts=posts, total_pages=total_pages)
 
 @bp.route('/<post_category>/<fragment>', methods=['GET', 'POST'])
 def get_post(fragment, post_category):
