@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Nunito">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/getpost.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/buttons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fa/css/font-awesome.min.css') }}">
     {% include 'head.html' %}
     {% include 'cookies.html' %}
     <title>{{ post_row['title'] }}</title>
@@ -33,6 +34,7 @@
             <p>Written By <strong><a href="/author/{{ post_row['firstname'] }}" style="color: #333">{{
                         post_row['firstname'] }}</a></strong>
             </p>
+            {% include 'share.html' %}
         </div>
         <h1 id="article-title-2"> {{ post_row['title'] | safe }} </h1>
         <div id="body-1"> {{ post_row['body'] | safe }} </div>
