@@ -23,6 +23,7 @@ button:hover {
 #shareIcon {
     padding: 0.4rem 0.4rem 0.6rem 0rem;
     align-self: center;
+    cursor: pointer;
 }
 
 box {
