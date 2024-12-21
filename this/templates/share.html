@@ -1,25 +1,27 @@
 <script src="{{ url_for('blog.static', filename='js/share.js')}}" defer></script>
 <div id="share">
-        <i id="shareIcon" class="fa fa-share-square-o fa-2x" aria-hidden="true"></i>
+        <div>
+                <i id="shareIcon" class="fa fa-share-square-o fa-2x" aria-hidden="true"></i>
+                <p>Share</p>
+        </div>
         <box class="shareButtons" hidden><a
                         href="https://twitter.com/intent/tweet?text=I just wrote {{ post_row['title'] }}&url=https://butterskinned.me/{{ post_row['category'] }}/{{ post_row['fragment']}}"
-                        target="_blank">Share on X
-                        (Twitter)</a>
+                        target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
         </box>
         <box class="shareButtons" hidden><a
                         href="https://www.facebook.com/sharer/sharer.php?u=https://butterskinned.me/{{ post_row['category'] }}/{{ post_row['fragment']}}"
-                        target="_blank">Share on Facebook</a>
+                        target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
         </box>
         <box class="shareButtons" hidden><a
                         href="https://www.linkedin.com/shareArticle?mini=true&url=https://butterskinned.me/{{ post_row['category'] }}/{{ post_row['fragment']}}"
-                        target="_blank">Share on LinkedIn</a>
+                        target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
         </box>
         <box class="shareButtons" hidden><a
                         href="https://www.snapchat.com/scan?attachmentUrl=https://butterskinned.me/{{ post_row['category'] }}/{{ post_row['fragment']}}"
-                        target="_blank">Share on SnapChat</a>
+                        target="_blank"><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a>
         </box>
         <box class="shareButtons" hidden><a
                         href=" https://api.whatsapp.com/send?text=https://butterskinned.me/{{ post_row['category'] }}/{{ post_row['fragment']}}"
-                        target="_blank">Share on WhatsApp</a>
+                        target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
         </box>
 </div>
