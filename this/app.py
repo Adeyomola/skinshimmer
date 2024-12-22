@@ -1,5 +1,5 @@
 from flask import Flask, render_template, session, redirect, send_from_directory
-import sqlalchemy
+from sqlalchemy import create_engine
 import os
 import urllib.parse as up
 from datetime import timedelta
@@ -18,7 +18,7 @@ def create_app():
     app.config.from_mapping(
         SECRET_KEY=secret_key,
         SEND_FILE_MAX_AGE_DEFAULT = 600,
-        ENGINE= sqlalchemy.create_engine(f"mysql://{db_user}:{db_password}@{host}/{db_name}")
+        ENGINE= create_engine(f"mysql://{db_user}:{db_password}@{host}/{db_name}")
     )
 
     from . import blog
