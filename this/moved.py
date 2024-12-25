@@ -39,4 +39,6 @@ def h():
 def i():
     return redirect('/hair/hair-transplant-without-shaving-head', code=301)
 
-
+@bp.route('/skincare/winter-skin-tips-keep-skin-moisturized')
+def j():
+    return redirect('/skincare/winter-2025-skin-tips-keep-skin-moisturized', code=301)
