@@ -120,10 +120,12 @@ tr:first-child {
     color: white;
 }
 
-#body-1>img,
-#body-1>div>img,
-#body-1>p>img {
+#body-1 img {
     width: 60%;
+}
+
+#body-1 a {
+    color: #333;
 }
 
 /* edit delete, and update styling */
