@@ -21,7 +21,7 @@ def metadata():
     Column('created', TIMESTAMP, default=datetime.datetime.now),
     Column('title', VARCHAR(255), nullable=False),
     Column('body', Text, nullable=False),
-    Column('image_url', String(455)),
+    Column('image_url', String(255)),
     Column('category', VARCHAR(255), nullable=False),
     Column('fragment', VARCHAR(255), nullable=False, unique=True),
     Column('image_credit', VARCHAR(200)),
