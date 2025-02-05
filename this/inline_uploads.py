@@ -17,10 +17,10 @@ class Upload:
         return '.' in filename and filename.rsplit('.', 1)[1].lower() in ['png', 'jpg', 'jpeg', 'webp']
 
     def upload_file(self, route=''):
-        if 'file' not in request.files:
+        if 'inlineimage' not in request.files:
             error = 'No file part'
             return error
-        file = request.files['file']
+        file = request.files['inlineimage']
 
         if file.filename == "":
             return
