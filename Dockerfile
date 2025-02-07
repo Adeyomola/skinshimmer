@@ -13,5 +13,5 @@ RUN pip install -r requirements.txt && chmod +x /usr/local/bin/conf_editor.sh
 WORKDIR /this
 ENTRYPOINT conf_editor.sh && flask db-init \
     # && mod_wsgi-express start-server wsgi.py --user adeyomola --group adeyomola --port 80 --processes 2 --envvars .env \
-    && flask run --debug \
+    && flask run --debug --host=0.0.0.0 \
     && tail -f /dev/null
