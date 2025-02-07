@@ -27,7 +27,7 @@ def author_posts(author_name):
     #     page = 1
 
 
-    statement = (select(table).where(table.c.firstname == author_name).order_by(desc(table.c.id).limit(12)))
+    statement = (select(table).where(table.c.firstname == author_name).order_by(desc(table.c.id)))
     posts = connection.execute(statement).fetchall()
 
     statement2 = (select(md.tables['users']).where(md.tables['users'].c.username == author_name))
