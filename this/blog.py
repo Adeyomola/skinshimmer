@@ -18,14 +18,27 @@ table = md.tables['post']
 @bp.route('/author/<author_name>', strict_slashes=False)
 def author_posts(author_name):
     connection = get_db()
-    statement = (select(table).where(table.c.firstname == author_name).order_by(desc(table.c.id)))
+
+    page = request.args.get("p")
+
+    if page:
+        page = int(page)
+    else:
+        page = 1
+
+
+    statement = (select(table).where(table.c.firstname == author_name).order_by(desc(table.c.id).limit(12).offset((page - 1) * 12)))
     posts = connection.execute(statement).fetchall()
 
     statement2 = (select(md.tables['users']).where(md.tables['users'].c.username == author_name))
     bio = connection.execute(statement2).fetchone()
 
+    row_count = select(func.count('*')).select_from(table).filter(table.c.firstname == author_name)
+    total_rows = connection.execute(row_count).scalar()
+    total_pages = (total_rows + 12 - 1)//12
+
     connection.close()
-    return render_template('author.html', posts=posts, bio=bio)
+    return render_template('author.html', posts=posts, bio=bio, total_pages=total_pages)
 
 def front_posts():
     connection = get_db()
