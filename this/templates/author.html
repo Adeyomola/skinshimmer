@@ -38,24 +38,22 @@
             {% for post in posts %}
             <summary>
                 {% if post['image_url'] %}
-                <img src="{{ post['image_url'] }}" alt="{{ post['title'] | safe }}" height="55%" width="100%">
+                <img src="{{ post['image_url'] }}">
                 {% endif %}
                 {% if not post['image_url'] %}
-                <img src="../static/images/placeholder.webp" alt="placeholder" height="55%" width="100%">
+                <img src="../static/images/placeholder.webp">
                 {% endif %}
                 <a href="/{{ post ['category'] }}/{{ post['fragment']}}" id="article-title">{{ post['title'] | safe
                     }}</a>
-                <a href="/{{ post ['category'] }}/{{ post['fragment']}}" id="preview">{{ post['body'] | striptags |
-                    truncate(90, True, '..') | replace(" ",
+                <a href="/{{ post ['category'] }}/{{ post['fragment']}}" id="preview">{{ post['body'] | replace(" ",
                     "//space//") | replace("<br>",
                     "//nbsp//") | replace("<div>",
-                        "//nbsp//") | striptags | replace("//space//", " " ) |
-                        replace("//nbsp//", "\n") }}</a>
+                        "//nbsp//") | striptags | replace("//space//", " " ) | replace("//nbsp//", "\n") }}</a>
             </summary>
             {% endfor %}
         </section>
     </div>
-    <!-- {% include 'paginator.html' %} -->
+    {% include 'paginator.html' %}
     {% include 'footer.html' %}
     {% endblock %}
 </body>
