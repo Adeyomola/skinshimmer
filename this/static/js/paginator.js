@@ -1,5 +1,5 @@
 const pageNumbers = document.querySelectorAll(".pageNumbers");
-const href = window.location.pathname + window.location.search;
+const href = decodeURI(window.location.pathname + window.location.search);
 console.log(href);
 
 pageNumbers.forEach((page) => {
