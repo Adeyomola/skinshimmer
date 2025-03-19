@@ -10,15 +10,15 @@
             <a href="{{ url_for ('blog.skincare') }}" title="posts">
                 Skincare</a>
         </div>
+        {% if session['user_id'] %}
         <hr>
         <div>
-            {% if session['user_id'] %}
             <a href="/write">
                 Write</a>
             <a href="/logout" title="posts">
                 Log Out</a>
-            {% endif %}
         </div>
+        {% endif %}
     </nav>
 </header>
 {% block content %}

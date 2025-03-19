@@ -150,6 +150,7 @@ function show_media() {
       images.childNodes.forEach((el) => {
         el.addEventListener("click", () => {
           document.execCommand("insertImage", false, el.src);
+          alert(el.src)
           media.toggleAttribute("hidden");
         });
       });
