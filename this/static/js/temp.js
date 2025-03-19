@@ -149,8 +149,7 @@ function show_media() {
       // insert inline image
       images.childNodes.forEach((el) => {
         el.addEventListener("click", () => {
-          document.execCommand("insertImage", false, el.src);
-          alert(el.src)
+          document.execCommand("insertImage", false, el.firstElementChild.src);
           media.toggleAttribute("hidden");
         });
       });
