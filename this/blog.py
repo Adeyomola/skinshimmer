@@ -99,6 +99,46 @@ def post():
     connection.close()
     return render_template('post.html', posts=posts, total_pages=total_pages)
 
+@bp.route('/hair', strict_slashes=False)
+def hair():
+    connection = get_db()
+    page = request.args.get("p")
+
+    if page:
+        page = int(page)
+    else:
+        page = 1
+    
+    statement = (select(table).where(table.c.category == 'hair').order_by(desc(table.c.id)).limit(12).offset((page - 1) * 12))
+    posts = connection.execute(statement).fetchall()
+
+    row_count = select(func.count('*')).select_from(table)
+    total_rows = connection.execute(row_count).scalar()
+    total_pages = (total_rows + 12 - 1)//12
+
+    connection.close()
+    return render_template('post.html', posts=posts, total_pages=total_pages)
+
+@bp.route('/skincare', strict_slashes=False)
+def skincare():
+    connection = get_db()
+    page = request.args.get("p")
+
+    if page:
+        page = int(page)
+    else:
+        page = 1
+    
+    statement = (select(table).where(table.c.category == 'skincare').order_by(desc(table.c.id)).limit(12).offset((page - 1) * 12))
+    posts = connection.execute(statement).fetchall()
+
+    row_count = select(func.count('*')).select_from(table)
+    total_rows = connection.execute(row_count).scalar()
+    total_pages = (total_rows + 12 - 1)//12
+
+    connection.close()
+    return render_template('post.html', posts=posts, total_pages=total_pages)
+
 @bp.route('/<post_category>/<fragment>', methods=['GET', 'POST'])
 def get_post(fragment, post_category):
     connection = get_db()
