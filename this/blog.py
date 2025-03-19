@@ -112,7 +112,7 @@ def hair():
     statement = (select(table).where(table.c.category == 'hair').order_by(desc(table.c.id)).limit(12).offset((page - 1) * 12))
     posts = connection.execute(statement).fetchall()
 
-    row_count = select(func.count('*')).select_from(table)
+    row_count = select(func.count('*')).where(table.c.category == 'hair').select_from(table)
     total_rows = connection.execute(row_count).scalar()
     total_pages = (total_rows + 12 - 1)//12
 
@@ -132,7 +132,7 @@ def skincare():
     statement = (select(table).where(table.c.category == 'skincare').order_by(desc(table.c.id)).limit(12).offset((page - 1) * 12))
     posts = connection.execute(statement).fetchall()
 
-    row_count = select(func.count('*')).select_from(table)
+    row_count = select(func.count('*')).where(table.c.category == 'skincare').select_from(table)
     total_rows = connection.execute(row_count).scalar()
     total_pages = (total_rows + 12 - 1)//12
 
