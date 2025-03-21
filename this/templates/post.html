@@ -21,7 +21,7 @@
     {% endfor %}
     {% block content %}
     <div id="link-container">
-        {% if request.path == 'post' %}
+        {% if request.path == '/post' %}
         <h1 id="ourtoppicks">All Articles</h1>
         {% else %}
         <h1 id="ourtoppicks">All {{ request.path | replace("/", "") | capitalize }} Articles</h1>
