@@ -21,10 +21,10 @@
     {% endfor %}
     {% block content %}
     <div id="link-container">
-        {% if request.url == 'post' %}
+        {% if request.path == 'post' %}
         <h1 id="ourtoppicks">All Articles</h1>
         {% else %}
-        <h1 id="ourtoppicks">All {{ request.url }} Articles</h1>
+        <h1 id="ourtoppicks">All {{ request.path }} Articles</h1>
         {% endif %}
         <section>
             {% for post in posts %}
